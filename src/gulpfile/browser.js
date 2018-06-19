@@ -17,13 +17,14 @@ function bsFunction(distDir,proxy) {
   if(proxy){
     browserSync({
       server: {
-        baseDir: distDir
+        baseDir: config.path.dist
       }
     });
   }else{
-    console.log("OFF");
-    return browserSync({
-      proxy: config.proxy
+    browserSync({
+      server: {
+        baseDir: config.path.dist
+      }
     });
   }
 }

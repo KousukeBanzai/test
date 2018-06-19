@@ -10,7 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.7.2",
-    "browser-sync": "^2.18.7",
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.24.4",
     "css-mqpacker": "^5.0.1",
     "csso": "^3.1.1",
     "del": "^3.0.0",
