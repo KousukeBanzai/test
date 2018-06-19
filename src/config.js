@@ -25,10 +25,10 @@ config = {
     "cms_theme_name":"yswallow_child/"
   },
   "mode":{
-    static:false,          // 静的モード
-    cms:true,              // CMSモード
+    static:true,          // 静的モード
+    cms:false,              // CMSモード
     cmstype:"wordpress",   // 使用するCMSの種類
-    html:false,            // htmlを使用する場合
+    html:true,            // htmlを使用する場合
     ejs:false               // ejsを使用する場合
   }
 };
