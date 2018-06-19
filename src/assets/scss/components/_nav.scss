@@ -1,0 +1,17 @@
+/* ============================================================ //
+// @ navigation style
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+#g_nav{
+  @include min-media($screen-lg){
+    margin-top: 0;
+  }
+}
+
+#g_nav .nav > li > a{
+  @include min-media($screen-lg){
+    padding: 12px 0;
+  }
+}
