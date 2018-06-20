@@ -1,74 +1,8 @@
 /*--------------------------------------------------------------//
-// @ Noto Sans JP
+// @ fonts
 // ------------------------------------------------------------ */
 
-@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@font-face {
-  font-family: 'Noto Sans JP';
-  font-style: bold;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Medium.woff2) format('woff2'),
-  url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Medium.woff) format('woff'),
-  url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Medium.otf) format('opentype');
-}
-
-// ------------------------------------------------------------
-// @ Font Awesome
-// ------------------------------------------------------------
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
-  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
-  url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
-  url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
-  url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
-  url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
-  //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
-  font-weight: normal;
-  font-style: normal;
-}
-
-// ------------------------------------------------------------
-// @ Material Icons
-// ------------------------------------------------------------
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.eot'); /* For IE6-8 */
-  src: local('Material Icons'),
-  local('MaterialIcons-Regular'),
-  url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.woff2') format('woff2'),
-  url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.woff') format('woff'),
-  url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.ttf') format('truetype');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
+$fonts_path: "../fonts/";
 
 // ------------------------------------------------------------
 // @  OPEN SANS
@@ -132,6 +66,23 @@
 }
 
 // ------------------------------------------------------------
+// @ Font Awesome
+// ------------------------------------------------------------
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+  url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+  url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+  url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
+  url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
+  //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ------------------------------------------------------------
 // @ Noto Serif JP
 // ------------------------------------------------------------
 
@@ -139,16 +90,58 @@
   font-family: 'Noto Serif Japanese';
   font-style: normal;
   font-weight: 400;
-  src: url('#{$fonts_path}/NotoSerifJP/NotoSerifCJKjp-Regular.woff') format('woff');
+  src: url('#{$fonts_path}NotoSerifJP/NotoSerifCJKjp-Regular.woff') format('woff');
   font-display: swap;
 }
 @font-face {
   font-family: 'Noto Serif Japanese';
   font-style: bold;
   font-weight: 700;
-  src: url('../fo#{$fonts_path}NotoSerifJP/NotoSerifCJKjp-Bold.woff') format('woff');
+  src: url('#{$fonts_path}NotoSerifJP/NotoSerifCJKjp-Bold.woff') format('woff');
   font-display: swap;
 }
+
+// ------------------------------------------------------------
+// @ Material Icons
+// ------------------------------------------------------------
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.woff2') format('woff2'),
+  url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.woff') format('woff'),
+  url('#{$fonts_path}material-design-icons/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
 
 // ------------------------------------------------------------
 // @ フォントクラス

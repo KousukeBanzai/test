@@ -1,6 +1,30 @@
-#customize-wrapper{
-  //line-height: $line-height-base;
-  //font-size: $font-size-base;
+html{
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+  @include max-media($screen-md){
+    line-height: $line-height-base;
+    font-size: $font-size-base-tab;
+  }
+  @include max-media($screen-sm){
+    font-size: $font-size-base-tab;
+  }
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+h1{font-size: $font-size-h1;}
+h2{font-size: $font-size-h2;}
+h3{font-size: $font-size-h3;}
+h4{font-size: $font-size-h4;}
+h5{font-size: $font-size-h5;}
+h6{font-size: $font-size-h6;}
 
+p{
+  display: inline-block;
+  margin: 0 0 1em 0;
+}

@@ -2,25 +2,124 @@
 // @ layout container
 // ============================================================ */
 
-#customize-wrapper{
-  .section-container{
-    margin-bottom: 80px;
+/* ============================================================ //
+// @ layout container
+// ============================================================ */
+//
+// ブレイクポイントやコンテナサイズ、コンテナの左右余白などはvariable.scssにて指定する
+
+body.is-fixed{
+  margin-top: 54px;
+}
+
+
+// @ container
+// ------------------------------------------------------------
+//
+// 横幅最小値(min-width)を指定
+
+.container{
+  width: 100%;
+  min-width:$container-lg;
+  @include max-media($screen-md){
+    min-width:100%;
+  }
+}
+
+// ブレイクポイントmd以下、左右のパッティング値が0
+
+.container-full--md{
+  width: 100%;
+  min-width:$container-lg;
+  @include max-media($screen-md){
+    min-width:100%;
+    padding:0;
+  }
+}
+
+// ブレイクポイントsm以下、左右のパッティング値が0
+
+.container-full--sp{
+  width: 100%;
+  min-width:$container-lg;
+  @include max-media($screen-md){
+    min-width:100%;
+  }
+  @include max-media($screen-sm){
+    padding:0;
+  }
+}
+
+// container__inner
+// 横幅最小値は親要素となるcontainerに指定
+// container__inner要素では横幅最大値、左右余白を指定し、内包要素の横幅を保持
+
+
+.container__inner {
+  background: #000;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $container-lg;
+  padding:0 $container-padding-lg;
+  @include max-media($screen-md){
+    max-width: 100%;
+    padding:0 $container-padding-md;
+  }
+  @include max-media($screen-sm){
+    padding:0 $container-padding-sm;
+  }
+  &--sp-full{
+    margin: 0 auto;
+    width: 100%;
+    max-width: $container-lg;
+    padding:0 $container-padding-lg;
     @include max-media($screen-md){
-      margin-bottom: 80px;
+      max-width: 100%;
+      padding:0 $container-padding-md;
     }
     @include max-media($screen-sm){
-      margin-bottom: 60px;
-    }
-    &:last-child{
-      margin-bottom: 30px;
+      padding:0;
     }
   }
 }
 
-#main{
-  line-height: $line-height-base;
-  font-size: $font-size-base;
-  @include min-media($screen-lg){
-    margin-bottom: 50px;
+// @ wrapper
+// ------------------------------------------------------------
+//
+// <main>やコンテンツブロックに付与し、内包要素をラッピング
+
+.wrapper{
+  padding:70px 0 50px;
+  @include max-media($screen-md){
+    padding:50px 0 50px;
+  }
+  @include max-media($screen-sm){
+    padding:30px 0 50px;
+  }
+  &--top{
+    padding:70px 0 0;
+    @include max-media($screen-md){
+      padding:50px 0 0;
+    }
+    @include max-media($screen-sm){
+      padding:30px 0 0;
+    }
+  }
+  &--index{
+
+    padding:100px 0 50px;
+    @include max-media($screen-md){
+      padding:70px 0 35px;
+    }
+    @include max-media($screen-sm){
+      padding:70px 0 35px;
+    }
+  }
+}
+
+.entry-contaier{
+  padding:0 250px;
+  @include max-media($screen-md){
+    padding:0;
   }
 }
