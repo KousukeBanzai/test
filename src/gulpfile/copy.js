@@ -1,4 +1,3 @@
-
 //========================================================================
 // コピーアセット
 //========================================================================
@@ -33,6 +32,7 @@ function copyAssets(distDir) {
   gulp.src(config.path.source + config.path.file + '/**/*')
     .pipe(gulp.dest(distDir + config.path.file))
     .pipe(browserSync.stream());
+
   //img *imageminでコピーできないgif画像をコピー
   gulp.src([config.path.source + config.path.img + '/**/*.gif',config.path.source + config.path.img + '/**/*.cur'])
     .pipe(gulp.dest(distDir + config.path.img))

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <!--<meta name="viewport" content="width=1200">-->
   <title itemprop="name">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</title>
   <!-- Standard SEO -->
@@ -28,14 +29,16 @@
   <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16">
   <!-- stylesheets -->
-  <link rel="stylesheet" href="./assets/css/style.css" media="all">
+  <link rel="stylesheet" href="./assets/css/customize.css" media="all">
   <link rel="stylesheet" href="./assets/css/lib/hiraku/hiraku.css" media="all">
+  <link rel="stylesheet" href="./assets/css/lib/slider-pro/slider-pro.css" media="all">
   <!-- scripts -->
   <script src="./assets/js/jquery.js"></script>
   <script src="./assets/js/vender.js"></script>
   <script src="./assets/js/common.js"></script>
   <script src="./assets/js/index.js"></script>
   <script src="./assets/js/lib/hiraku.min.js"></script>
+  <script src="./assets/js/lib/jquery.sliderPro.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 10]>
@@ -46,9 +49,137 @@
   </p>
 </div>
 <![endif]-->
-<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+<header class="header container">
+  <button type="button" class="header-toggle js-offcanvas-btn" >
+      <span class="sr-only">Toggle navigation</span>
+      <span class="hiraku-open-btn-line"></span>
+  </button>
+  <div class="container__inner">
+    <div class="header-primary">
+      <nav class="gnav js-offcanvas">
+        <ul class="gnav-body">
+          <li class="gnav-item"><a class="link-hover" href="#"><span class="gnav-item-jp">会社案内</span><span class="gnav-item-en">COMPANY</span></a></li>
+          <li class="gnav-item"><a class="link-hover" href="#"><span class="gnav-item-jp">製品案内</span><span class="gnav-item-en">PRODUCTS</span></a></li>
+          <li class="gnav-item"><a class="link-hover" href="#"><span class="gnav-item-jp">導入事例</span><span class="gnav-item-en">CASE STUDY</span></a></li>
+          <li class="gnav-item"><a class="link-hover" href="#"><span class="gnav-item-jp">カタログ</span><span class="gnav-item-en">CATALOG</span></a></li>
+          <li class="gnav-item"><a class="link-hover" href="#"><span class="gnav-item-jp">よくある質問</span><span class="gnav-item-en">FAQ</span></a></li>
+          <li class="gnav-item"><a class="link-hover" href="#"><span class="gnav-item-jp">採用情報</span><span class="gnav-item-en">RECRUIT</span></a></li>
+          <li class="gnav-item visible--md"><a class="link-hover" href="#"><span class="gnav-item-jp">サイトマップ</span><span class="gnav-item-en">SITE MAP</span></a></li>
+          <li class="gnav-item visible--md"><a class="link-hover" href="#"><span class="gnav-item-jp">プライバシーポリシー</span><span class="gnav-item-en">PRIVACY POLICY</span></a></li>
+          <li class="gnav-item visible--md"><a class="link-hover" href="#"><span class="gnav-item-jp">サイトポリシー</span><span class="gnav-item-en">SITE POLICY</span></a></li>
+        </ul>
+        <ul class="subnav--offcanvas">
+          <li class="subnav--offcanvas-item subnav--offcanvas-item--youtube"><a class="link-hover" href="#"><img src="./assets/img/common/youtube-logo.png" alt="YOUTUBE"></a></li>
+        </ul>
+      </nav>
+      <nav class="subnav">
+        <ul class="subnav-body">
+          <li class="subnav-item"><a class="link-hover" href="#"><span class="subnav-item-icon"><i class="material-icons subnav-item-icon--home">home</i></span><span class="subnav-item-label subnav-item-label--home">HOME</span></a></li>
+          <li class="subnav-item"><a class="link-hover" href="#"><span class="subnav-item-icon"><i class="material-icons subnav-item-icon--mail">mail_outline</i></span><span class="subnav-item-label subnav-item-label--mail">CONTACT</span></a></li>
+          <li class="subnav-item subnav-item-youtube"><a class="link-hover subnav-item-youtube" href="#"><img src="./assets/img/common/youtube-logo.png" alt="YOUTUBE"></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-secondary">
+      <h1 class="h-logo" title="サンエス工業株式会社"><a class="link-hover" href="./index.html"><img class="img-responsive" src="./assets/img/common/h-logo.png" alt="サンエス工業株式会社"></a></h1>
+    </div>
+  </div>
+</header>
+<div class="js-mainvisual main-visual">
+  <div class="sp-slides">
+    <div class="sp-slide">
+      <img class="sp-image" src="https://placehold.jp/900x330.png"/>
+    </div>
+    <div class="sp-slide">
+      <img class="sp-image" src="https://placehold.jp/900x330.png"/>
+    </div>
+    <div class="sp-slide">
+      <img class="sp-image" src="https://placehold.jp/900x330.png"/>
+    </div>
+    <div class="sp-slide">
+      <img class="sp-image" src="https://placehold.jp/900x330.png"/>
+    </div>
+  </div>
+</div>
+<div class="block-main" style="margin: 200px 0;">
+  <div class="container">
+    <div class="container__inner">
+      <p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+    </div>
+  </div>
+</div>
+<div class="container cta">
+  <div class="container__inner cta-body">
+    <div class="cta-content">
+      <h2 class="cta__title">お問い合わせ<span class="en">CONTACT</span></h2>
+      <div class="cta__text-unit text-unit">
+        <p class="jp">製品・サービスに関するご質問・ご要望などございましたら、<span class="inline-block">お気軽にお問い合わせ下さい。</span></p>
+        <p class="en">If you have any questions or requests regarding products or services,please do not hesitate to contact us.</p>
+      </div>
+      <div class="cta__info">
+        <div class="cta__info-item">
+          <span class="cta__info-item__label">TEL</span><span class="cta__info-item__number"><span data-tel="093-581-3851">093-581-3851</span></span>
+        </div>
+        <div class="cta__info-item">
+          <span class="cta__info-item__label">FAX</span><span class="cta__info-item__number">093-591-2870</span>
+        </div>
+      </div>
+      <div class="cta__btn-group">
+        <div class="cta__btn-item">
+          <a class="btn btn01--white cta__btn-item__btn noto-serif-regular " href="">メールでのお問い合わせはこちら</a>
+        </div>
+        <div class="cta__btn-item">
+          <a class="btn btn01--white cta__btn-item__btn open-sans-bold " href="">MAIL FORM</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer container">
+  <nav class="fnav container__inner">
+    <div class="fnav-body">
+      <ul class="fnav-unit">
+        <li class="fnav-item"><a href="#">会社案内</a></li>
+        <li class="fnav-item"><a href="#">カタログ</a></li>
+        <li class="fnav-item"><a href="#">よくあるご質問</a></li>
+        <li class="fnav-item"><a href="#">採用情報</a></li>
+      </ul>
+      <ul class="fnav-unit">
+        <li class="fnav-item"><a href="#">製品案内</a></li>
+        <li class="fnav-item fnav-item--child"><a href="#">カタログ</a></li>
+        <li class="fnav-item fnav-item--child"><a href="#">よくあるご質問</a></li>
+        <li class="fnav-item fnav-item--child"><a href="#">採用情報</a></li>
+      </ul>
+      <ul class="fnav-unit">
+        <li class="fnav-item"><a href="#">導入事例</a></li>
+      </ul>
+      <ul class="fnav-unit">
+        <li class="fnav-item"><a href="#">サイトマップ</a></li>
+        <li class="fnav-item"><a href="#">プライバシーポリシー</a></li>
+        <li class="fnav-item"><a href="#">サイトポリシー</a></li>
+        <li class="fnav-item"><a href="#">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="finfo">
+    <div class="container__inner">
+      <div class="finfo-body">
+        <div class="finfo-item"><h2 class="finfo-item__logo" title="サンエス工業株式会社"><img class="img-responsive" src="./assets/img/common/f-logo.png" alt="サンエス工業株式会社"></h2></div>
+        <div class="finfo-item">
+          <div class="finfo-item__unit">
+          <p>
+          <span class="text-bold color-brand">[本社・工場]</span><br>
+          〒803-0835 福岡県北九州市小倉北区井堀4-9-9<br>
+          TEL : <span data-tel="093-581-3851">093-581-3851</span> | FAX : <span data-tel="093-591-2870">093-591-2870</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="fcopy">
+    <p class="fcopy__copy">Copyright (c)  SAN-S INDUSTRY CO.,LTD All Rights Reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
 

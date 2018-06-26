@@ -1,5 +1,5 @@
 config = {
-  "name" : "ProjectName",
+  "name" : "sans",
   "proxy": "",
   "path": {
     "source": "./",
@@ -22,13 +22,13 @@ config = {
     "node" : "node_modules/",
     "cms_dir":"",
     "cms_theme_path":"wordpress/wp-content/themes/",
-    "cms_theme_name":"yswallow_child/"
+    "cms_theme_name":"sans/"
   },
   "mode":{
-    static:true,          // 静的モード
-    cms:false,              // CMSモード
+    static:false,          // 静的モード
+    cms:true,              // CMSモード
     cmstype:"wordpress",   // 使用するCMSの種類
-    html:true,            // htmlを使用する場合
+    html:false,            // htmlを使用する場合
     ejs:false               // ejsを使用する場合
   }
 };

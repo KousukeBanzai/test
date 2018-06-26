@@ -21,9 +21,9 @@ $brand-disable          :  #888;
 // @ brand main color
 // ------------------------------------------------------------
 
-$brand-main             :  #01061d;
+$brand-main             :  #01187c;
 $brand-main-darker      :  #021462;
-$brand-main-darken      :  #082959;
+$brand-main-darken      :  #01061d;
 $brand-main-lighter     :  #015a9c;
 $brand-main-lighten     :  #0d85de;
 
@@ -222,6 +222,7 @@ $cursor-disabled         :  not-allowed;
 // of components dependent on the z-axis and are designed to all work together.
 // Note: These variables are not generated into the Customizer.
 
+$zindex-slider           :  500;
 $zindex-header           :  1000;
 $zindex-dropdown         :  1000;
 $zindex-popover          :  1060;
@@ -299,9 +300,9 @@ $grid-float-breakpoint-max:  ($grid-float-breakpoint - 1);
 
 //## Define the maximum width of `.container` for different screen sizes.
 
-$container-padding-lg    : 80px;
+$container-padding-lg    : 100px;
 $container-padding-md    : 3%;
-$container-padding-sm    : 10px;
+$container-padding-sm    : 15px;
 
 // Small screen / tablet
 $container-tablet        : ($screen-md + $grid-gutter-width);

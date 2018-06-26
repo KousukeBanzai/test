@@ -96,10 +96,17 @@ $fonts_path: "../fonts/";
 @font-face {
   font-family: 'Noto Serif Japanese';
   font-style: bold;
-  font-weight: 700;
-  src: url('#{$fonts_path}NotoSerifJP/NotoSerifCJKjp-Bold.woff') format('woff');
+  font-weight: 600;
+  src: url('#{$fonts_path}NotoSerifJP/NotoSerifCJKjp-SemiBold.woff') format('woff');
   font-display: swap;
 }
+//@font-face {
+//  font-family: 'Noto Serif Japanese';
+//  font-style: normal;
+//  font-weight: 700;
+//  src: url('#{$fonts_path}NotoSerifJP/NotoSerifCJKjp-Bold.woff') format('woff');
+//  font-display: swap;
+//}
 
 // ------------------------------------------------------------
 // @ Material Icons

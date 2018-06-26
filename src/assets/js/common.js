@@ -64,3 +64,45 @@ if(UA.search("iPhone") != -1){ htmlElement.className += 'iphone '; }
 // Android のとき
 if(UA.search("Android") != -1){ htmlElement.className += 'android '; }
 
+// ============================================================
+// @ スマホ時のみ電話番号にリンクを張る
+// ============================================================
+//
+// example
+//
+// <span data-tel="0300000000">03-0000-0000</span>
+// <span data-tel="0312345678"><img src="tel.png" /></span>
+//
+// data-telが付いている要素をリンク書き換えの対象として、その値が電話番号になるように設定
+
+$(function() {
+  sp_tel();
+});
+
+// スマートフォン・タブレットで談話番号にリンクを追加する
+function sp_tel() {
+  var UA = navigator.userAgent.toLowerCase();
+  var isSpTb = (UA.indexOf('iphone') > -1) || (UA.indexOf('ipad') > -1) || (UA.indexOf('android') > -1);
+  if(!isSpTb) {
+    return;
+  }
+  for (var i = 0; i < $('[data-tel').length; i++) {
+    var telElem = $('[data-tel]').eq(i).html();
+    var telUrl = $('[data-tel]').eq(i).data('tel');
+    $('[data-tel]').eq(i).replaceWith('<a href="tel:' + telUrl + '" data-tel="' + telUrl + '">' + telElem + '</a>');
+  }
+}
+
+
+// ============================================================
+// @ hiraku js
+// ============================================================
+
+$(function () {
+  $(".js-offcanvas").hiraku({
+    btn: ".js-offcanvas-btn",
+    fixedHeader: ".js-fixed-header",
+    direction: "left",
+    breakpoint: 769
+  });
+});
