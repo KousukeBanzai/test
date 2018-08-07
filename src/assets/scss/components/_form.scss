@@ -4,21 +4,289 @@
 
 $img_path: "./../../assets/img/";
 
-#customize-wrapper {
-  // ------------------------------------------------------------
-  // @ form-control
-  // ------------------------------------------------------------
-  .form-control {
-    margin: 0;
-    outline: none;
-    //appearance
-    appearance: none;
-    -webkit-appearance: none;
+.form-group {
+  margin-bottom: 0;
+}
+.label--required {
+  float: right;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  border-radius: 10px;
+  background: $brand-danger;
+  padding: .4em .5em;
+  line-height: 1;
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+}
+.fld-agree__text {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* ============================================================ //
+// @ form-control width
+// ============================================================ */
+
+// @ フォームグリッド
+// ------------------------------
+
+.form-w10p {
+  @include min-media($screen-lg){
+    width: 10%;
+  }
+  @include max-media($screen-md){
+    width: 10%;
+  }
+  @include print{
+    width: 10%;
+  }
+}
+.form-w20p {
+  @include min-media($screen-lg){
+    width: 20%;
+  }
+  @include max-media($screen-md){
+    width: 20%;
+  }
+  @include print{
+    width: 20%;
+  }
+}
+.form-w30p {
+  @include min-media($screen-lg){
+    width: 30%;
+  }
+  @include max-media($screen-md){
+    width: 30%;
+  }
+  @include print{
+    width: 30%;
+  }
+}
+.form-w35p {
+  @include min-media($screen-lg){
+    width: 35%;
+  }
+  @include max-media($screen-md){
+    width: 35%;
+  }
+  @include print{
+    width: 35%;
+  }
+}
+.form-w40p {
+  @include min-media($screen-lg){
+    width: 40%;
+  }
+  @include max-media($screen-md){
+    width: 40%;
+  }
+  @include print{
+    width: 40%;
+  }
+}
+.form-w50p {
+  @include min-media($screen-lg){
+    width: 50%;
+  }
+  @include max-media($screen-md){
+    width: 50%;
+  }
+  @include print{
+    width: 50%;
+  }
+}
+.form-w60p {
+  @include min-media($screen-lg){
+    width: 60%;
+  }
+  @include max-media($screen-md){
+    width: 60%;
+  }
+  @include print{
+    width: 60%;
+  }
+}
+.form-w70p {
+  @include min-media($screen-lg){
+    width: 70%;
+  }
+  @include max-media($screen-md){
+    width: 70%;
+  }
+  @include print{
+    width: 70%;
+  }
+}
+.form-w75p {
+  @include min-media($screen-lg){
+    width: 75%;
+  }
+  @include max-media($screen-md){
+    width: 75%;
+  }
+  @include print{
+    width: 75%;
+  }
+}
+.form-w80p {
+  @include min-media($screen-lg){
+    width: 80%;
+  }
+  @include max-media($screen-md){
+    width: 80%;
+  }
+  @include print{
+    width: 80%;
+  }
+}
+.form-w90p {
+  @include min-media($screen-lg){
+    width: 90%;
+  }
+  @include max-media($screen-md){
+    width: 90%;
+  }
+  @include print{
+    width: 90%;
+  }
+}
+.form-w100p {
+  @include min-media($screen-lg){
+    width: 100%;
+  }
+  @include max-media($screen-md){
+    width: 100%;
+  }
+  @include print{
+    width: 100%;
+  }
+}
+
+
+/* ============================================================ //
+// @ form-control
+// ============================================================ */
+
+// input textarea に付与する
+/*doc
+---
+title:
+name:
+category:
+---
+
+｀｀｀html_example
+
+<th>
+  <p class="contact-tabel__title">メールアドレス</p>
+  <p class="contact-tabel__lead open-sans-bold">Mail address</p>
+</th>
+<td>[tel your-mail class:form-control]</td>｀
+
+
+*/
+
+
+.form-control {
+  margin: 0;
+  outline: none;
+  //appearance
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  border: 1px solid $input-border;
+  padding: $input-pad;
+  vertical-align: middle;
+  border-radius: $input-border-radius;
+  color: $input-color;
+  background: $input-bg;
+  &:focus,
+  &:hover {
+    border-color: $brand-primary;
+  }
+  &:active {
+    border-color: $brand-primary;
+  }
+  &:focus {
+    outline: 0;
+    border-color: $brand-primary;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05), 0 0 8px rgba(204, 204, 204, .3);
+  }
+  &::-webkit-input-placeholder {
+    color: $input-color-placeholder;
+  }
+  &::-moz-input-placeholder {
+    color: $input-color-placeholder;
+  }
+  &::-ms-input-placeholder {
+    color: $input-color-placeholder;
+  }
+}
+
+// ------------------------------------------------------------
+// @ select
+// ----------------------------------------------------------&--
+
+/*doc
+---
+title:
+name:
+category:
+---
+
+｀｀｀html_example
+
+<tr>
+  <th>お問い合わせ項目</th>
+  <td><div class="select"><label>[select fld_category id:fld_category  class:form-w50p "お見積り" "ご注文" "製品について" "採用" "その他"]</label></div></td>
+</tr>｀｀｀
+
+
+*/
+
+.select {
+  display: inline-block;
+  position: relative;
+  select{
+    // @ リセット
+    // ----------------------------
     -moz-appearance: none;
-    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+    //border-radius: 0;
+    //border: 0;
+    margin: 0;
+    //padding: 0;
+    background: none transparent;
     vertical-align: middle;
+    font-size: inherit;
+    //firefox
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    //for ie
+    &::-ms-expand {
+      display: none;
+    }
+
+    // @ スタイル
+    // ------------------------------
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius;
+    padding: .4em 2.4em .4em .6em;
+    color: $text-color;
+    background: #fbfbfb;
     &:focus,
     &:hover {
+      outline: 0;
       border-color: $brand-primary;
     }
     &:active {
@@ -29,191 +297,317 @@ $img_path: "./../../assets/img/";
       border-color: $brand-primary;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05), 0 0 8px rgba(204, 204, 204, .3);
     }
-    &::-webkit-input-placeholder {
-      color: $input-color-placeholder;
-    }
-    &::-moz-input-placeholder {
-      color: $input-color-placeholder;
-    }
-    &::-ms-input-placeholder {
-      color: $input-color-placeholder;
-    }
-  }
-
-  // ------------------------------------------------------------
-  // @ form-control width
-  // ------------------------------------------------------------
-  #main input[type="text"], #main input[type="password"], #main input[type="datetime"], #main input[type="datetime-local"], #main input[type="date"], #main input[type="month"], #main input[type="time"], #main input[type="week"], #main input[type="number"], #main input[type="email"], #main input[type="url"], #main input[type="search"], #main input[type="tel"], #main input[type="color"], #main select, #main textarea, #main .field{
-    &.form-w100p{
-      width: 100%;
-      max-width: 100%;
-    }
-    &.form-w90p{
-      width: 90%;
-      max-width: 90%;
-    }
-    &.form-w80p{
-      width: 80%;
-      max-width: 80%;
-    }
-    &.form-w75p{
-      width: 75%;
-      max-width: 75%;
-    }
-    &.form-w70p{
-      width: 70%;
-      max-width: 70%;
-    }
-    &.form-w60p{
-      width: 60%;
-      max-width: 60%;
-    }
-    &.form-w50p{
-      width: 50%;
-      max-width: 50%;
-    }
-    &.form-w40p{
-      width: 40%;
-      max-width: 40%;
-    }
-    &.form-w30p{
-      width: 30%;
-      max-width: 30%;
+    &:after {
+      display: block;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 6px 0 6px;
+      border-color: $brand-primary transparent transparent transparent;
     }
   }
-  select.form-control{
-    padding: 2%;
-    line-height: 1;
-  }
-  textarea.form-control{
-    padding: 10px;
-  }
-
-  // ------------------------------------------------------------
-  // @ label
-  // ------------------------------------------------------------
-
-  .form-label-req{
+  label:before {
     z-index: 2;
-    top: -2px;
-    position: relative;
-    margin-left: 5px;
     display: inline-block;
-    background: #cc0000;
-    color: #fff;
-    font-size: 10px;
-    line-height: 1;
-    padding: .3em .5em;
-    float: right;
-    border-radius: 5px;
-    text-align: center;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translate(0%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 6px 0 6px;
+    border-color: $text-color transparent transparent transparent;
+    margin-top: 6px;
   }
-
-  // ------------------------------------------------------------
-  // @ contact-form-table
-  // ------------------------------------------------------------
-
-  .contact-form-table{
-    table{
-      @include max-media($screen-sm){
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        border:none;
-      }
-    }
-    tr{
-      @include max-media($screen-sm){
-        border:none;
-      }
-    }
-    th{
-      width: 35%;
-      max-width: 35%;
-      text-align: left;
-      @include max-media($screen-sm){
-        text-align: left;
-        border-left:solid 1px rgb(229, 229, 229);
-        border-right:solid 1px rgb(229, 229, 229);
-        border-top:none;
-        border-bottom:none;
-      }
-
-    }
-    td{
-      position: relative;
-      @include max-media($screen-sm){
-        border-top: none;
-        border-bottom:none;
-        border-color: rgb(229, 229, 229);
-      }
-    }
-    th,td{
-      @include max-media($screen-sm){
-        display: block;
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  }
-
-  // ------------------------------------------------------------
-  // @ Contact Form 7 add confirm
-  // ------------------------------------------------------------
-
-  .form-sbmit-group{
-    width: 100%;
-    max-width: 100%;
-    @include clearfix();
-  }
-
-  .form_confirm{
-    display: block;
-    margin: 0 auto;
-    background: $brand-primary;
-    @include link-hover();
-  }
-
-  .form_backedit{
-    display: block;
-    float: left;
-    background: $brand-info;
-    @include link-hover();
-  }
-
-  .form_submit{
-    float: right;
-    display: block;
-    background: $brand-success;
-    @include link-hover();
-  }
-
-  .wpcf7c-conf{
-    background: #edfaff;
-    pointer-events: none;
-  }
-
-  // ------------------------------------------------------------
-  // @ Contact Form 7 キャンセル
-  // ------------------------------------------------------------
-
-  // @ バリデートメッセージキャンセル
-  // ------------------------------
-  .wpcf7-not-valid-tip{
-    display: none!important;
-  }
-  // @ ローダーキャンセル
-  // ------------------------------
-
-  div.wpcf7 .ajax-loader {
-    display: none !important;
-  }
-
-  // @ アラートボックスキャンセル
-  // ------------------------------
-  .wpcf7-mail-sent-ok,
-  .wpcf7-validation-errors{
-    display:none !important;
+  label:after {
+    z-index: 2;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -6px;
+    transform: translate(0%, -50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 6px 0 6px;
+    border-color: $text-color transparent transparent transparent;
   }
 }
 
+
+
+// ------------------------------------------------------------
+// @ radio
+// ------------------------------------------------------------
+
+/*doc
+---
+title: ラジオボタン
+name: raido
+category: form
+---
+
+```html_example
+
+// use contact form7
+[radio radio-343 class:radio use_label_element default:1 "同意する" " 同意しない"]
+
+<label>
+  <input type="radio" name="radio-343" value="同意する" checked="checked">
+  <span class="wpcf7-list-item-label">同意する</span>
+</label>
+
+```
+*/
+
+$form-active-color: $brand-primary;
+
+// @  radio
+// ------------------------------
+input[type=radio],input[type=radio]:checked{
+  display: none!important;
+}
+
+.radio{
+  input[type=radio] + span{
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    padding: 0 0 0 2.3em;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  input[type=radio] + span:hover:after{
+    border-color: $form-active-color;
+  }
+}
+
+.radio{
+  input[type=radio] + span:after{
+    @include transition-delay();
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '';
+    margin-top: -12px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    background: #fff;
+  }
+  input[type=radio] + span:before{
+    z-index:2;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    display: block;
+    margin-top: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $form-active-color;
+    content: '';
+    opacity: 0;
+  }
+  input[type=radio]:checked + span:before,
+  input[type=radio]:checked + span:after{
+    opacity: 1;
+    border-color: $form-active-color;
+  }
+}
+
+// ------------------------------------------------------------
+// @ checkbox
+// ------------------------------------------------------------
+
+/*doc
+---
+title: チェックボックス
+name: checkbox
+category: form
+---
+
+```html_example
+
+// use contact form7
+[checkbox* checkbox-678 class:checkbox use_label_element "hoge" "fuga" "piyo"]
+
+<label>
+  <input type="checkbox" name="checkbox-678[]" value="高磁力型マグネット式チップコンベア" data-com.agilebits.onepassword.user-edited="yes">
+  <span class="wpcf7-list-item-label">hoge</span>
+</label>
+
+```
+*/
+
+$form-active-color: $brand-primary;
+
+input[type=checkbox],input[type=checkbox]:checked {
+  display: none!important;
+}
+
+.checkbox{
+  input[type=checkbox] + span{
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    padding: 0 0 0 2.3em;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  input[type=checkbox] + span:hover:after {
+    border-color: $form-active-color;
+  }
+}
+
+.checkbox{
+  input[type=checkbox] + span:after{
+    @include transition-delay();
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '';
+    margin-top: -12px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: #fff;
+  }
+  input[type=checkbox] + span:before {
+    z-index:2;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    display: block;
+    margin-top: -7px;
+    width: 10px;
+    height: 6px;
+    border-bottom: solid 2px $form-active-color;
+    border-left: solid 2px $form-active-color;
+    content: '';
+    opacity: 0;
+  }
+  input[type=checkbox]:checked{
+    display: block;
+    background: #000;
+  }
+  input[type=checkbox]:checked + span:before,
+  input[type=checkbox]:checked + span:after {
+    opacity: 1;
+    border-color: $form-active-color;
+  }
+}
+
+
+/* ============================================================ //
+// @ form-table
+// ============================================================ */
+
+.form-table {
+  th {
+    text-align: left;
+  }
+}
+
+/* ============================================================ //
+// @ validationEngine.jquery.css
+// ============================================================ */
+
+/* Z-INDEX */
+.formError {
+  z-index: 990;
+}
+.formError .formErrorContent {
+  z-index: 991;
+}
+.formError .formErrorArrow {
+  z-index: 996;
+}
+.ui-dialog .formError {
+  z-index: 5000;
+}
+.ui-dialog .formError .formErrorContent {
+  z-index: 5001;
+}
+.ui-dialog .formError .formErrorArrow {
+  z-index: 5006;
+}
+.inputContainer {
+  position: relative;
+  float: left;
+}
+.formError {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  display: block;
+  cursor: pointer;
+  text-align: left;
+}
+.formError.inline {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.ajaxSubmit {
+  padding: 20px;
+  background: #55ea55;
+  border: 1px solid #999;
+  display: none;
+}
+.formError .formErrorContent {
+  width: 100%;
+  background: #ee0101;
+  position: relative;
+  color: #fff;
+  min-width: 120px;
+  font-size: 13px;
+  opacity: .8;
+  //box-shadow: 0 0 6px #000;
+  //-moz-box-shadow: 0 0 6px #000;
+  //-webkit-box-shadow: 0 0 6px #000;
+  //-o-box-shadow: 0 0 6px #000;
+  padding: .5em 1em;
+  border-radius: 3px;
+}
+.formError.inline .formErrorContent {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  border: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+}
+.greenPopup .formErrorContent {
+  background: #33be40;
+}
+.blackPopup .formErrorContent {
+  background: #393939;
+  color: #FFF;
+}
