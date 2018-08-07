@@ -11,18 +11,6 @@ $(function () {
   $('#fld_name01').attr(valDataKey,valReq);
   $('#fld_mail01').attr(valDataKey,'validate[required,custom[email]]');
 
-  $('#fld_age').attr(valDataKey,valReq);
-  $('#fld_sex').attr(valDataKey,valReq);
-  $('#fld_type').attr(valDataKey,valReq);
-  $('#fld_marriage').attr(valDataKey,valReq);
-  $('#fld_your-body').attr(valDataKey,valReq);
-  $('#fld_partner-body input').attr(valDataKey,valReq);
-  $('#fld_partner-age input').attr(valDataKey,valReq);
-  $('#fld_work').attr(valDataKey,valReq);
-  $('#fld_tabacco').attr(valDataKey,valReq);
-  $('#fld_msg').attr(valDataKey,valReq);
-  $('#fld_agree input').attr(valDataKey,valReq);
-
   // ------------------------------------------------------------
   // @ validationEngine
   // ------------------------------------------------------------
