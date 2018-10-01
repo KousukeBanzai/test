@@ -58,7 +58,7 @@ gulp.task('build', function (callback) {
   if(config.mode.cms === true && config.mode.cmstype === "acms") {
     return runSequence(
         'clean',
-        ['scss', 'hologram', 'js', 'copy.assets'],
+        ['scss', 'hologram', 'js', 'copy.html' , 'copy.assets'],
         'imagemin',
         callback
     );

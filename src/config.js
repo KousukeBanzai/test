@@ -1,5 +1,5 @@
 config = {
-  "name" : "sans",
+  "name" : "tokiyori_development",
   "proxy": "",
   "path": {
     "source": "./",
@@ -21,13 +21,13 @@ config = {
     "dummy" : "assets/dummy/",
     "node" : "node_modules/",
     "cms_dir":"",
-    "cms_theme_path":"wordpress/wp-content/themes/",
-    "cms_theme_name":"sans/"
+    "cms_theme_path":"themes/",
+    "cms_theme_name":"tokiyori_development/"
   },
   "mode":{
     static:false,          // 静的モード
     cms:true,              // CMSモード
-    cmstype:"wordpress",   // 使用するCMSの種類
+    cmstype:"acms",   // 使用するCMSの種類
     html:false,            // htmlを使用する場合
     ejs:false               // ejsを使用する場合
   }
