@@ -1,0 +1,39 @@
+/* ============================================================ //
+// @ initialize
+// ============================================================ */
+
+// メディアクエリが正常に出力されるようここで定義
+
+*{
+  box-sizing: border-box;
+  @include max-media($screen-xlg){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-lg){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-mlg){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-slg){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-md){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-6ls){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-5ls){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-sm){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-msm){
+    box-sizing: border-box;
+  }
+  @include max-media($screen-xs){
+    box-sizing: border-box;
+  }
+}

@@ -3,3 +3,22 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; // これが縦横比
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.video-container-livestream{
+  margin-bottom: 20px;
+}

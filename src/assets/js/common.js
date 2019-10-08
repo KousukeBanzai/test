@@ -98,11 +98,97 @@ function sp_tel() {
 // @ hiraku js
 // ============================================================
 
+// $(function () {
+//   $(".js-offcanvas").hiraku({
+//     btn: ".js-offcanvas-btn",
+//     fixedHeader: ".js-fixed-header",
+//     direction: "right",
+//     breakpoint: 769
+//   });
+// });
+
+// ============================================================
+// 変数
+// ============================================================
+
+$screen = {
+  'xsm' : '320',
+  'sm' : '414',
+  'md' : '769',
+  'lg' : '1023',
+}
+
+// 画面幅取得
+// -------------------
+$(window).on('load resize', function(){
+  $windowWidth = $(window).width();
+});
+
+// ============================================================
+// html要素にscreen判定クラスを付与
+// ============================================================
+
+// screen- から始まるクラスを全てremove
+// -------------------
+
+function removeScreenClass(target) {
+  target.removeClass(function(index, className) {
+    return (className.match(/\bscreen-\S+/g) || []).join(' ');
+  });
+}
+
+// 画面サイズを判定してscreenクラスをセット
+// -------------------
+
+function setScreenClass(target) {
+  removeScreenClass(target);
+  if($windowWidth <= $screen.xsm){
+    target.addClass('screen-xsm');
+  }else if($windowWidth > $screen.xsm && $windowWidth <= $screen.sm){
+    target.addClass('screen-sm');
+  }else if($windowWidth > $screen.sm && $windowWidth <= $screen.md){
+    target.addClass('screen-md');
+  }else if($windowWidth > $screen.md){
+    target.addClass('screen-lg');
+  }else{
+    target.addClass('none');
+  }
+}
+
+// 関数実行
+// -------------------
+
+$(window).on('load resize', function(){
+  setScreenClass($('html'));
+});
+
+
+
 $(function () {
+
+  // ============================================================
+  // @ hiraku js
+  // ============================================================
+
   $(".js-offcanvas").hiraku({
     btn: ".js-offcanvas-btn",
     fixedHeader: ".js-fixed-header",
-    direction: "left",
+    direction: "right",
     breakpoint: 769
   });
+
+  // マウスオーバー
+  // ------------------------------------------------------------
+
+  $('.js-mouseover').each(function(){
+    var src_off = $(this).find('img').attr('src');
+    var src_on = src_off.replace('_off','_on');
+    $('<img />').attr('src',src_on);
+    $(this).hover(function(){
+      $(this).find('img').attr('src',src_on);
+    },function(){
+      $(this).find('img').attr('src',src_off);
+    });
+  });
+
 });

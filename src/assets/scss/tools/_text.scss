@@ -2,8 +2,45 @@
 // @ text align
 // ------------------------------------------------------------ */
 
-/* @ text state
-// ------------------------------------------------------------ */
+//<h3 class="heading03">テキスト関係汎用クラス</h3>
+//<table class="table01">
+//<tbody>
+//<tr>
+//<th>text-center  </th>
+//<td><p>テキストを中央寄せに</p></td>
+//</tr>
+//<tr>
+//<th>text-left</th>
+//<td><p>テキストを左寄せに</p></td>
+//</tr>
+//<tr>
+//<th>text-right</th>
+//<td><p>テキストを右寄せに</p></td>
+//</tr>
+//<tr>
+//<th>text-bold</th>
+//<td><p>テキストを太文字に</p></td>
+//</tr>
+//<tr>
+//<th>text-normal</th>
+//<td><p>テキストを通常の太さに</p></td>
+//</tr>
+//<tr>
+//<th>nowrap</th>
+//<td><p>ソース中のホワイトスペースを無視</p>
+//<p>ソース中の改行を1つの半角スペースとして表示</p>
+//<p>ボックスサイズが指定されている場合にも自動改行しない</p></td>
+//</tr>
+//<tr>
+//<th>text-overflow</th>
+//<td><p>テキストが親ボックスを超過した場合、三点リーダを表示させる</p></td>
+//</tr>
+//</tbody>
+//</table>
+
+
+    /* @ text state
+    // ------------------------------------------------------------ */
 
 .text-center{
   text-align: center;
@@ -27,19 +64,6 @@
   white-space: nowrap !important
 }
 
-// @ text color
-// ------------------------------------------------------------
-.text-color-base{
-  color: $text-color;
-}
-
-.text-color-sub{
-  color: $text-color-sub;
-}
-
-// @ fontsize
-// ------------------------------------------------------------
-
-.fz_8em{
-  font-size: .8em;
+.text-overflow{
+  @include text-overflow();
 }

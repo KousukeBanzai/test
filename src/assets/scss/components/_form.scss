@@ -7,6 +7,7 @@ $img_path: "./../../assets/img/";
 .form-group {
   margin-bottom: 0;
 }
+
 .label--required {
   float: right;
   display: inline-block;
@@ -20,148 +21,261 @@ $img_path: "./../../assets/img/";
   color: #fff;
   font-weight: normal;
 }
+
 .fld-agree__text {
   font-size: 16px;
   font-weight: normal;
 }
 
 /* ============================================================ //
+//  table-form
+// ============================================================ */
+
+.table-form {
+  width: 100%;
+  margin: 0 0 20px;
+  table-layout: auto;
+  border-collapse: collapse;
+  @include max-media($screen-sm) {
+    padding: 10px 0;
+  }
+
+  table{
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+
+    @include max-media($screen-sm) {
+      display: block;
+      width: 100%;
+      padding: 0 0 10px 0;
+      font-size: 15px;
+    }
+  }
+
+  th {
+    vertical-align: top;
+    text-align: left;
+    width: 30%;
+    max-width: 280px;
+    min-width: 240px;
+    font-weight: bold;
+    @include max-media($screen-md) {
+      max-width: 190px;
+      min-width: 150px;
+    }
+    @include max-media($screen-sm) {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  td {
+    vertical-align: top;
+
+
+    @include max-media($screen-sm) {
+      margin: 0 0 10px;
+      padding: 0 0 10px;
+    }
+  }
+}
+
+/* ============================================================ //
 // @ form-control width
 // ============================================================ */
+
+// @ form item center
+// ------------------------------
+
+.form-item--center{
+  margin: 1.333333333em 0;
+  display: flex;
+  -js-display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  p{
+    margin-bottom: 0;
+  }
+}
 
 // @ フォームグリッド
 // ------------------------------
 
 .form-w10p {
-  @include min-media($screen-lg){
+  width: 10%;
+  @include min-media($screen-lg) {
     width: 10%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 10%;
   }
-  @include print{
+  @include print {
     width: 10%;
   }
 }
+
 .form-w20p {
-  @include min-media($screen-lg){
+  width: 20%;
+  @include min-media($screen-lg) {
     width: 20%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 20%;
   }
-  @include print{
+  @include print {
     width: 20%;
   }
 }
+
 .form-w30p {
-  @include min-media($screen-lg){
+  width: 30%;
+  @include min-media($screen-lg) {
     width: 30%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 30%;
   }
-  @include print{
+  @include print {
     width: 30%;
   }
 }
+
 .form-w35p {
-  @include min-media($screen-lg){
+  width: 35%;
+  @include min-media($screen-lg) {
     width: 35%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 35%;
   }
-  @include print{
+  @include print {
     width: 35%;
   }
 }
+
 .form-w40p {
-  @include min-media($screen-lg){
+  width: 40%;
+  @include min-media($screen-lg) {
     width: 40%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 40%;
   }
-  @include print{
+  @include print {
     width: 40%;
   }
 }
+
 .form-w50p {
-  @include min-media($screen-lg){
+  width: 50%;
+  @include min-media($screen-lg) {
     width: 50%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 50%;
   }
-  @include print{
+  @include print {
     width: 50%;
   }
 }
+
 .form-w60p {
-  @include min-media($screen-lg){
+  width: 60%;
+  @include min-media($screen-lg) {
     width: 60%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 60%;
   }
-  @include print{
+  @include print {
     width: 60%;
   }
 }
+
 .form-w70p {
-  @include min-media($screen-lg){
+  width: 70%;
+  @include min-media($screen-lg) {
     width: 70%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 70%;
   }
-  @include print{
+  @include print {
     width: 70%;
   }
 }
+
 .form-w75p {
-  @include min-media($screen-lg){
+  width: 75%;
+  @include min-media($screen-lg) {
     width: 75%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 75%;
   }
-  @include print{
+  @include print {
     width: 75%;
   }
 }
+
 .form-w80p {
-  @include min-media($screen-lg){
+  width: 80%;
+  @include min-media($screen-lg) {
     width: 80%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 80%;
   }
-  @include print{
+  @include print {
     width: 80%;
   }
 }
+
 .form-w90p {
-  @include min-media($screen-lg){
+  width: 90%;
+  @include min-media($screen-lg) {
     width: 90%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 90%;
   }
-  @include print{
+  @include print {
     width: 90%;
   }
 }
+
 .form-w100p {
-  @include min-media($screen-lg){
+  width: 100%;
+  @include min-media($screen-lg) {
     width: 100%;
   }
-  @include max-media($screen-md){
+  @include max-media($screen-md) {
     width: 100%;
   }
-  @include print{
+  @include print {
     width: 100%;
+  }
+}
+
+/* ============================================================ //
+// @ 状態クラス
+// ============================================================ */
+
+
+.form-control--disable{
+  background: #eee !important;
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  &:hover{
+    border-color:#ccc !important;
+    cursor: not-allowed !important;
   }
 }
 
@@ -188,7 +302,6 @@ category:
 
 
 */
-
 
 .form-control {
   margin: 0;
@@ -248,10 +361,17 @@ category:
 
 */
 
+select{
+  border: 1px solid #ccc;
+  color: $text-color;
+  background: #fff;
+  height: 38px;
+}
+
 .select {
   display: inline-block;
   position: relative;
-  select{
+  select {
     // @ リセット
     // ----------------------------
     -moz-appearance: none;
@@ -309,7 +429,7 @@ category:
       border-color: $brand-primary transparent transparent transparent;
     }
   }
-  label:before {
+  &:before {
     z-index: 2;
     display: inline-block;
     content: '';
@@ -324,7 +444,7 @@ category:
     border-color: $text-color transparent transparent transparent;
     margin-top: 6px;
   }
-  label:after {
+  &:after {
     z-index: 2;
     display: inline-block;
     content: '';
@@ -341,6 +461,10 @@ category:
   }
 }
 
+
+.select-label{
+  padding: 0 6px;
+}
 
 
 // ------------------------------------------------------------
@@ -371,12 +495,12 @@ $form-active-color: $brand-primary;
 
 // @  radio
 // ------------------------------
-input[type=radio],input[type=radio]:checked{
-  display: none!important;
+input[type=radio], input[type=radio]:checked {
+  display: none !important;
 }
 
-.radio{
-  input[type=radio] + span{
+.radio {
+  input[type=radio] + span {
     box-sizing: border-box;
     -webkit-transition: background-color 0.2s linear;
     transition: background-color 0.2s linear;
@@ -387,13 +511,13 @@ input[type=radio],input[type=radio]:checked{
     vertical-align: middle;
     cursor: pointer;
   }
-  input[type=radio] + span:hover:after{
+  input[type=radio] + span:hover:after {
     border-color: $form-active-color;
   }
 }
 
-.radio{
-  input[type=radio] + span:after{
+.radio {
+  input[type=radio] + span:after {
     @include transition-delay();
     display: block;
     position: absolute;
@@ -407,8 +531,8 @@ input[type=radio],input[type=radio]:checked{
     border-radius: 50%;
     background: #fff;
   }
-  input[type=radio] + span:before{
-    z-index:2;
+  input[type=radio] + span:before {
+    z-index: 2;
     -webkit-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
     position: absolute;
@@ -424,7 +548,7 @@ input[type=radio],input[type=radio]:checked{
     opacity: 0;
   }
   input[type=radio]:checked + span:before,
-  input[type=radio]:checked + span:after{
+  input[type=radio]:checked + span:after {
     opacity: 1;
     border-color: $form-active-color;
   }
@@ -456,12 +580,12 @@ category: form
 
 $form-active-color: $brand-primary;
 
-input[type=checkbox],input[type=checkbox]:checked {
-  display: none!important;
+input[type=checkbox], input[type=checkbox]:checked {
+  display: none !important;
 }
 
-.checkbox{
-  input[type=checkbox] + span{
+.checkbox {
+  input[type=checkbox] + span {
     box-sizing: border-box;
     -webkit-transition: background-color 0.2s linear;
     transition: background-color 0.2s linear;
@@ -477,8 +601,8 @@ input[type=checkbox],input[type=checkbox]:checked {
   }
 }
 
-.checkbox{
-  input[type=checkbox] + span:after{
+.checkbox {
+  input[type=checkbox] + span:after {
     @include transition-delay();
     display: block;
     position: absolute;
@@ -493,7 +617,7 @@ input[type=checkbox],input[type=checkbox]:checked {
     background: #fff;
   }
   input[type=checkbox] + span:before {
-    z-index:2;
+    z-index: 2;
     -webkit-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
     transform: rotate(-45deg);
@@ -509,7 +633,7 @@ input[type=checkbox],input[type=checkbox]:checked {
     content: '';
     opacity: 0;
   }
-  input[type=checkbox]:checked{
+  input[type=checkbox]:checked {
     display: block;
     background: #000;
   }
@@ -519,7 +643,6 @@ input[type=checkbox],input[type=checkbox]:checked {
     border-color: $form-active-color;
   }
 }
-
 
 /* ============================================================ //
 // @ form-table
@@ -539,25 +662,32 @@ input[type=checkbox],input[type=checkbox]:checked {
 .formError {
   z-index: 990;
 }
+
 .formError .formErrorContent {
   z-index: 991;
 }
+
 .formError .formErrorArrow {
   z-index: 996;
 }
+
 .ui-dialog .formError {
   z-index: 5000;
 }
+
 .ui-dialog .formError .formErrorContent {
   z-index: 5001;
 }
+
 .ui-dialog .formError .formErrorArrow {
   z-index: 5006;
 }
+
 .inputContainer {
   position: relative;
   float: left;
 }
+
 .formError {
   position: absolute;
   top: 300px;
@@ -566,18 +696,21 @@ input[type=checkbox],input[type=checkbox]:checked {
   cursor: pointer;
   text-align: left;
 }
+
 .formError.inline {
   position: relative;
   top: 0;
   left: 0;
   display: inline-block;
 }
+
 .ajaxSubmit {
   padding: 20px;
   background: #55ea55;
   border: 1px solid #999;
   display: none;
 }
+
 .formError .formErrorContent {
   width: 100%;
   background: #ee0101;
@@ -593,6 +726,7 @@ input[type=checkbox],input[type=checkbox]:checked {
   padding: .5em 1em;
   border-radius: 3px;
 }
+
 .formError.inline .formErrorContent {
   box-shadow: none;
   -moz-box-shadow: none;
@@ -604,10 +738,146 @@ input[type=checkbox],input[type=checkbox]:checked {
   -webkit-border-radius: 0;
   -o-border-radius: 0;
 }
+
 .greenPopup .formErrorContent {
   background: #33be40;
 }
+
 .blackPopup .formErrorContent {
   background: #393939;
   color: #FFF;
+}
+
+// @ form-step
+// ------------------------------------------------------------ */
+
+.form-step {
+  margin-bottom: 10px;
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    -js-display: flex;
+    flex-flow: row wrap;
+    background: #F2F2F2;
+    color: #2B85DE;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    border-right: #ccc 1px solid;
+    text-align: center;
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+  }
+
+  .is-active {
+    position: relative;
+    padding: 10px 5px;
+    background: $brand-primary;
+    color: #fff;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 1px;
+      transform: translate(110%, -50%);
+      content: "";
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      border-left: 5px solid $brand-primary;
+    }
+  }
+
+  .no-active {
+    padding: 10px 5px;
+
+  }
+}
+
+// @ form-box
+// ------------------------------------------------------------ */
+
+.form-box {
+  margin: 0 0 20px;
+  padding: 20px;
+  background: #F2F2F2;
+
+  @include max-media($screen-sm) {
+    padding: 15px;
+  }
+
+  p {
+    display: inline-block;
+    margin: 0;
+    font-size: 15px;
+
+    @include max-media($screen-sm) {
+      font-size: 12px;
+
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: $swatch-red;
+
+    @include max-media($screen-sm) {
+      font-size: 13px;
+    }
+  }
+}
+
+// ------------------------------------------------------------
+// Contact Form 7 Alert
+// ------------------------------------------------------------
+
+//@mixin formAlertPos($bgc){
+//  position: fixed;
+//  top: 50%;
+//  left: 50%;
+//  transform : translate(-50%,-50%);
+//  width: 100%;
+//  margin: 0;
+//  text-align: center;
+//  padding: 18px 0;
+//  color: #fff;
+//  font-weight: bold;
+//  border: none;
+//  background: $bgc;
+//}
+//
+//#body{
+//  .wpcf7-validation-errors.wpcf7-response-output{
+//    @include formAlertPos($brand-error);
+//  }
+//  .wpcf7-response-output.wpcf7-mail-sent-ng {
+//    @include formAlertPos($brand-warning);
+//  }
+//  .wpcf7-response-output.wpcf7-spam-blocked {
+//    @include formAlertPos($brand-error);
+//  }
+//  .wpcf7-response-output.wpcf7-validation-errors {
+//    @include formAlertPos($brand-error);
+//  }
+//  .wpcf7-response-output.wpcf7-mail-sent-ok {
+//    @include formAlertPos($brand-success);
+//  }
+//}
+
+
+
+// Contact form 7 標準バリデーションのエラー文を非表示
+// -------------------
+
+span.wpcf7-not-valid-tip{
+  display: none!important;
 }

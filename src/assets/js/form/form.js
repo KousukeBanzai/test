@@ -1,6 +1,6 @@
 $(function () {
 
-  var $formType01 = $(".js-contact-form01");
+  var $formType01 = $("#js-form-validation");
   // ------------------------------------------------------------
   // @ init
   // ------------------------------------------------------------
@@ -8,8 +8,8 @@ $(function () {
   var valDataKey = 'data-validation-engine',
       valReq     = 'validate[required]';
 
-  $('#fld_name01').attr(valDataKey,valReq);
-  $('#fld_mail01').attr(valDataKey,'validate[required,custom[email]]');
+  $('.js-validation-required').attr(valDataKey,valReq);
+  $('#fld_mail').attr(valDataKey,'validate[required,custom[email]]');
 
   // ------------------------------------------------------------
   // @ validationEngine
@@ -23,7 +23,7 @@ $(function () {
     scrollOffset: 50
   });
 
-  $.fn.autoKana('#fld_name01', '#fld_name0101', {
+  $.fn.autoKana('#fld_name', '#fld_phonetic', {
     katakana: true  //true：カタカナ、false：ひらがな（デフォルト）
   });
 
@@ -32,8 +32,7 @@ $(function () {
       '#fld_zipcode'
     ],
     address: {
-      '#fld_zip01': '%3',
-      '#fld_zip02': '%4%5'
+      '#fld_zip': '%3%4%5',
     }
   });
 

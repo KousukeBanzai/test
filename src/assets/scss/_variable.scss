@@ -18,14 +18,23 @@ $brand-warning          :  #ed9a25 ;
 $brand-error            :  #d9534f;
 $brand-disable          :  #888;
 
+$brand-top-color        :  #E7682B;
+
 // @ brand main color
 // ------------------------------------------------------------
 
-$brand-main             :  #01187c;
+$brand-main             :  #073D88;
 $brand-main-darker      :  #021462;
 $brand-main-darken      :  #01061d;
 $brand-main-lighter     :  #015a9c;
 $brand-main-lighten     :  #0d85de;
+
+// @ Own color
+// ------------------------------------------------------------
+
+$brand-lighten          :  #F5F8FA;
+$brand-main-gradient    :  linear-gradient(-90deg, #0F7BB5, #073D88);
+$brand-main-gra-hover   :  linear-gradient(-90deg, #E6BB45, #FF6541);
 
 // @ swatch color
 // ------------------------------------------------------------
@@ -36,9 +45,10 @@ $swatch-brawn           :  #e5d7c6;
 $swatch-red             :  #ff0000;
 $swatch-pink            :  #f44da0;
 $swatch-pink-darker     :  #cd2855;
-$swatch-orange          :  #fead34;
+$swatch-orange          :  #e7951a;
 $swatch-yellow          :  #FEDA34;
 $swatch-aqua            :  #43a3d2;
+$swatch-skin            :  #f8f3df;
 
 // @ Scaffolding
 // ------------------------------------------------------------
@@ -49,13 +59,14 @@ $swatch-aqua            :  #43a3d2;
 $body-bg                :  #fff;
 //** Global text color on `<body>`.
 $text-color             :  #333;
-$text-color-sub         :  #888;
+$text-color-sub         :  #666;
 $text-color-white       :  #fff;
 
 //** Global textual link color.
 $link-color             :  $brand-primary;
+$link-color-header      :  #E7682B;
 //** Link hover color set via `darken()` function.
-$link-hover-color       :  darken($link-color, 15%);
+$link-hover-color       :  #E7682B;
 
 $hover-bg               :  $link-hover-color;
 //** Link hover decoration.
@@ -72,8 +83,10 @@ $font-family-gothic      :  'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN
 $font-family-monospace   :  Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // @ 以下、追加フォント
+$font-family-kakugostd   :  'ヒラギノ角ゴ Std W3','Hiragino Kaku Gothic Std', sans-serif;
 $font-family-notoserif   :  'Noto Serif Japanese', sans-serif;
 $font-family-opensans    :  'Open Sans', sans-serif;
+$font-family-sawarabi    :  'Sawarabi Mincho', sans-serif;
 
 // @ ベースフォント指定
 $font-family-base        :  $font-family-gothic;
@@ -237,46 +250,44 @@ $zindex-modal            :  1050;
 // @ Media queries breakpoints
 // ------------------------------------------------------------
 
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-//** Deprecated `$screen-xs` as of v3.0.1
+// Extra small screen / phoneSE
 $screen-xs               :  320px;
-//** Deprecated `$screen-xs-min` as of v3.2.0
 $screen-xs-min           :  $screen-xs;
-//** Deprecated `$screen-phone` as of v3.0.1
-$screen-phone            :  $screen-xs-min;
 
-// Small screen / tablet
-//** Deprecated `$screen-sm` as of v3.0.1
+// Small Mid Small screen / Iphone
+$screen-msm               :  375px;
+$screen-msm-min           :  $screen-sm;
+
+// Small screen / Iphone Plus
 $screen-sm               :  414px;
 $screen-sm-min           :  $screen-sm;
-//** Deprecated `$screen-tablet` as of v3.0.1
-$screen-tablet           :  $screen-sm-min;
 
-// iphone5 land scape
+// iphone5 land
 $screen-5ls              :  568px;
-// iphone6 land scape
+
+// iphone6 land
 $screen-6ls              :  667px;
 
-// Medium screen / desktop
-//** Deprecated `$screen-md` as of v3.0.1
+// Medium screen
 $screen-md               :  769px;
 $screen-md-min           :  $screen-sm + 1;
-//** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop          :  $screen-md-min;
 
-// Large screen / wide desktop
-//** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg               :  900px;
-$screen-lg-min           :  $screen-md + 1;
-//** Deprecated `$screen-lg-desktop` as of v3.0.1
-$screen-lg-desktop       :  $screen-lg-min;
+// Small large screen
+$screen-slg               :  980px;
+$screen-slg-min           :  $screen-md + 1;
 
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max           :  ($screen-sm-min - 1);
-$screen-sm-max           :  ($screen-md-min - 1);
-$screen-md-max           :  ($screen-lg-min - 1);
+// Mid large screen
+$screen-mlg               :  1024px;
+$screen-mlg-min           :  $screen-slg + 1;
+
+// Large screen
+$screen-lg               :   1180px;
+$screen-lg-min           :   $screen-mlg + 1;
+
+// Xlarge screen
+$screen-xlg               :   1980px;
+$screen-xlg-min           :   $screen-lg + 1;
 
 
 // @ Grid system
@@ -300,7 +311,7 @@ $grid-float-breakpoint-max:  ($grid-float-breakpoint - 1);
 
 //## Define the maximum width of `.container` for different screen sizes.
 
-$container-padding-lg    : 100px;
+$container-padding-lg    : 30px;
 $container-padding-md    : 3%;
 $container-padding-sm    : 15px;
 

@@ -1,1 +1,29 @@
+/* ============================================================ //
+// Top page
+// ============================================================ */
+
 $img_path: "../../assets/img/";
+
+// @ section unit
+// ------------------------------------------------------------ */
+
+.top-section{
+  &--news{
+    margin-bottom: 50px;
+  }
+
+  &--live{
+
+    a{
+      word-break: break-all;
+    }
+  }
+}
+
+
+.top-heading-live{
+  margin-bottom: 30px;
+  @include max-media($screen-md){
+    margin-bottom: 20px;
+  }
+}

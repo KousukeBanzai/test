@@ -2,13 +2,66 @@
 // @ color
 // ============================================================ */
 
-/* bootstrap color */
+//<h3 class="heading03">文字色クラス</h3>
+//<table class="table02">
+//<tbody>
+//<tr>
+//<th>color-base</th>
+//<td>文字色を<span class="color-base">base</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-darker</th>
+//<td>文字色を<span class="color-darker">darker</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-dark</th>
+//<td>文字色を<span class="color-dark">dark</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-gray</th>
+//<td>文字色を<span class="color-gray">gray</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-light</th>
+//<td>文字色を<span class="color-light">light</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-lighter</th>
+//<td>文字色を<span class="color-lighter">lighter</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-brand</th>
+//<td>文字色を<span class="color-brand">brand</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-primary</th>
+//<td>文字色を<span class="color-primary">primary</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-success</th>
+//<td>文字色を<span class="color-success">success</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-info</th>
+//<td>文字色を<span class="color-info">info</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-warning</th>
+//<td>文字色を<span class="color-warning">warning</span>に指定する</td>
+//</tr>
+//<tr>
+//<th>color-danger</th>
+//<td>文字色を<span class="color-danger">danger</span>に指定する</td>
+//</tr>
+//</tbody>
+//</table>
+
 
 .color-base{
-  color: $gray-base !important;
+  color: $brand-main !important;
 }
 .color-darker{
-  color: $gray-darker !important;
+  color: $brand-main-darker !important;
 }
 .color-dark{
   color: $gray-dark !important;
@@ -17,10 +70,10 @@
   color: $gray !important;
 }
 .color-light{
-  color: $gray !important;
+  color: $brand-main-lighter !important;
 }
 .color-lighter{
-  color: $gray-light !important;
+  color: $brand-main-lighten !important;
 }
 .color-brand{
   color: $brand-main !important;
@@ -84,22 +137,22 @@
 /* bootstrap color */
 
 .bg-base{
-  background-color: $gray-base !important;
+  background-color: $brand-main !important;
 }
 .bg-darker{
-  background-color: $gray-darker !important;
+  background-color: $brand-main-darken !important;
 }
 .bg-dark{
-  background-color: $gray-dark !important;
+  background-color: $brand-main-darker !important;
 }
 .bg-gray{
   background-color: $gray !important;
 }
 .bg-light{
-  background-color: $gray !important;
+  background-color: $brand-main-lighter !important;
 }
 .bg-lighter{
-  background-color: $gray-light !important;
+  background-color: $brand-main-lighten !important;
 }
 
 .bg-primary{
@@ -153,6 +206,10 @@
 
 .bg-aqua{
   background-color: $swatch-aqua !important;
+}
+
+.bg-yellow {
+  background-color: $swatch-skin !important;
 }
 
 

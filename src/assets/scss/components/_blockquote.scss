@@ -3,3 +3,30 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+
+@mixin blockquote {
+  background-color: #f2f2f2;
+  line-height: 1.8;
+  position: relative;
+  padding: 40px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  margin: 5em 0;
+  @include max-media($screen-md) {
+    margin: 3em 0;
+  }
+  @include max-media($screen-sm) {
+    margin: 1.5em 0;
+  }
+
+}
+
+.blockquote {
+  @include blockquote;
+}
+
+.entry-container {
+  blockquote {
+    @include blockquote;
+  }
+}

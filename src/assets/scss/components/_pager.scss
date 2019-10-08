@@ -3,3 +3,75 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+
+// use：Ambrosite Next/Previous Post Link Plus
+
+//  <div class="pager">
+//  <?php
+//  previous_post_link_plus( array(
+//  'format' => '%link',
+//  'link' => '<span class="meta-nav"></span> %title',
+//  'in_same_tax' => true
+//  ));
+//  next_post_link_plus( array(
+//  'format' => '%link',
+//  'link' => '<span class="meta-nav"></span> %title',
+//  'in_same_tax' => true
+//  ));
+//  ?>
+//  </div>
+
+.pager {
+  position: relative;
+  @include clearfix();
+}
+
+.pager-item{
+  width: 50%;
+  @include text-overflow();
+  &--right{
+    float: right;
+    text-align: right;
+    a{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      align-items: center;
+
+    }
+  }
+  &--left{
+    float: left;
+    a{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  a{
+    margin-top: 30px;
+    //
+    width: 100%;
+    max-width: 100%;
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    text-decoration: none;
+    color: $text-color;
+    padding: 15px 10px;
+    transition: all .3s ease;
+
+    &:hover{
+      background: #eee;
+    }
+  }
+
+  span{
+    width: 90%;
+    @include text-overflow;
+  }
+}
+
+.pager-icon{
+  font-size: 12px;
+}

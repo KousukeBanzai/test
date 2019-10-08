@@ -1,2 +1,76 @@
+/* ============================================================ //
+// Visual
+// ============================================================ */
+
 $img_path: "./../../assets/img/";
 
+/* ============================================================ //
+// page visual
+// ============================================================ */
+
+.page-visual {
+  padding-top: 230px;
+  background: url("#{$img_path}common/page-visual_bg.jpg") center center /cover no-repeat;
+  position: relative;
+
+  @include max-media($screen-md) {
+    padding-top: 160px;
+  }
+
+  @include max-media($screen-sm) {
+    padding-top: 130px;
+  }
+
+  &:before {
+    content: '';
+    background: #000;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__inner{
+    display: flex;
+    -js-display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    //
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    //
+    width: 100%;
+    max-width: $container-lg;
+    min-width: $container-lg;
+    padding: 0 $container-padding-lg 0;
+    @include max-media($screen-md) {
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0 $container-padding-md;
+    }
+    @include max-media($screen-sm) {
+      padding: 0 $container-padding-sm;
+    }
+  }
+
+  &__content{
+    color: #fff;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+
+    @include max-media($screen-md) {
+      font-size: 20px;
+    }
+  }
+}

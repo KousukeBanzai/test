@@ -3,3 +3,267 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+
+// header-lang-unit
+// ------------------------------------------------------------
+
+.header-lang-unit{
+  margin-right: 10px;
+  @include max-media($screen-md){
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+// @ header sns nav
+// ------------------------------------------------------------ */
+
+.h-nav-sns-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+}
+
+.h-nav-sns-item a{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 5px;
+}
+
+.h-nav-sns-item a img{
+  width: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+
+
+// @ global nav
+// ------------------------------------------------------------ */
+
+.gnav {
+  width: 100%;
+  @include min-media($screen-lg-min) {
+    min-width: $container-lg;
+  }
+}
+
+.gnav-body {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  //
+  margin: 0 auto;
+  width: 100%;
+  padding:0 $container-padding-lg;
+  list-style: none;
+
+  @include min-media($screen-md) {
+    max-width: $container-lg;
+    min-width: $container-lg;
+  }
+
+  @include max-media($screen-md) {
+    padding: 0;
+    display: block;
+  }
+}
+
+.gnav-item {
+  a {
+    padding: 10px 45px;
+    display: block;
+    text-align: center;
+    position: relative;
+
+    @include max-media($screen-md) {
+      padding: 20px 30px;
+      border-bottom: 1px #ccc solid;
+      text-align: left;
+    }
+
+    &:before {
+      @include max-media($screen-md) {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translate(0, -50%);
+        line-height: 1;
+        font-family: 'Material Icons';
+        content: "keyboard_arrow_right";
+        color: $brand-main;
+        font-size: 24px;
+        vertical-align: middle;
+        @include transition-delay();
+      }
+    }
+
+    &:hover::before {
+      @include max-media($screen-md) {
+        left: 8px;
+        color: $link-color-header;
+      }
+    }
+
+    &:link,
+    &:focus,
+    &:active,
+    &:visited,
+    &:hover {
+      text-decoration: none;
+      color: $brand-main;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: $link-color-header;
+    }
+  }
+
+  &__icon {
+    margin: 0 auto 5px;
+    width: 50px;
+    display: block;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+// @ footer nav
+// ------------------------------------------------------------ */
+
+.fnav:not(:last-child) {
+  margin-right: 100px;
+
+  &:lang(en){
+    margin-right: 30px;
+  }
+}
+
+.fnav-body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fnav-item {
+  font-size: 14px;
+  font-weight: 600;
+
+  &:lang(en){
+    font-size: 12px;
+  }
+
+  a {
+    padding: 10px 30px;
+    display: block;
+    position: relative;
+    @include transition-delay();
+
+    &:link,
+    &:focus,
+    &:active,
+    &:visited,
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      margin: -4px 0 0 0;
+      border-top: solid 2px $text-color;
+      border-right: solid 2px $text-color;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.fnav-child-body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fnav-child-item {
+  a {
+    margin: 0 0 0 10px;
+    padding: 10px 30px;
+    display: block;
+    font-size: 14px;
+    position: relative;
+    @include transition-delay();
+
+    :lang(en){
+      font-size: 12px;
+    }
+
+    &:link,
+    &:focus,
+    &:active,
+    &:visited,
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+    }
+
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// @ footer sns nav
+// ------------------------------------------------------------ */
+
+.fnav-sns {
+  text-align: right;
+}
+
+.fnav-sns-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: flex-end;
+
+  @include max-media($screen-md) {
+    justify-content: center;
+  }
+}
+
+.fnav-sns-body a {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 5px;
+}
+
+.fnav-sns-item a img{
+  width: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+}

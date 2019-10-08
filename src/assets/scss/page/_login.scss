@@ -1,0 +1,132 @@
+/* ============================================================ //
+// login
+// ============================================================ */
+
+$img_path: "../../assets/img/";
+
+#wpmem_reg fieldset, #wpmem_login fieldset{
+  margin: 0;
+  border: none;
+}
+
+
+//
+// ------------------------------------------------------------
+
+.login-box{
+  width: 550px;
+  max-width: 550px;
+  margin: 0 auto;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  @include max-media($screen-md){
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.login-box-heading{
+  margin-top: 0!important;
+}
+
+.login-box-fld_box{
+  margin-bottom: 15px;
+}
+
+.login-box-fld_title{
+  font-size: 13px;
+}
+
+.login-box-submit-group{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  //
+  margin: 20px auto 25px;
+  @include max-media($screen-sm){
+
+    justify-content: center;
+  }
+}
+
+.login-box-forget{
+  font-size: 12px;
+}
+
+#wpmem_login{
+  fieldset{
+    padding: 0;
+  }
+
+  // ログインボタン
+  // ------------------------------------------------------------
+
+  input[name="Submit"]{
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+
+    $btn-color-deps: 15%;
+    $hover-color: darken($brand-main, $btn-color-deps);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    //
+    transition: .3s;
+    text-transform: uppercase;
+    //
+    display: block;
+    border-radius: 5em;
+    padding: 1em 3.5em;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background: $brand-main;
+
+    &:after {
+      position: absolute;
+      z-index: -1;
+      left: -150%;
+      bottom: 0;
+      //
+      transition: .3s;
+      transform: skewX(15deg);
+      //
+      content: '';
+      width: 120%;
+      height: 120%;
+      //
+      background: $hover-color;
+    }
+
+    @include link-hover();
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:focus{
+      outline: none;
+    }
+
+
+  }
+}
+
+// エラーページ
+// ------------------------------------------------------------
+
+#wpmem_msg{
+  display: none!important;
+}

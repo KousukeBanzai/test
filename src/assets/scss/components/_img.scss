@@ -3,3 +3,41 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+
+figure{
+  margin: 0;
+  padding: 0;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+@mixin img-unit{
+  margin: 0 0 2em;
+
+  .img-responsive {
+    display: block;
+    width: 100%;
+    vertical-align: bottom;
+  }
+}
+
+.img-unit{
+  @include img-unit;
+}
+
+.entry-container{
+  img {
+    @include img-unit;
+  }
+}
+
+// entry-media-contaier
+// ------------------------------------------------------------
+
+.entry-media-container{
+  margin-bottom: 2.5em;
+}

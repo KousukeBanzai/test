@@ -1,0 +1,90 @@
+/* ============================================================ //
+// @ breadcrumb
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+/*doc
+---
+title: breadcrumb
+name: breadcrumb
+category: breadcrumb
+---
+
+
+```block
+
+<div class="breadcrumb">
+  <ul>
+    <li><a href="#"><span class="breadcrumb-icon--home">HOME</span></a></li>
+    <span class="breadcrumb-icon--arrow"></span>
+    <li><a href="#"><span>News</span></a></li>
+    <span class="breadcrumb-icon--arrow"></span>
+    <li><span>CurrentPageTitle</span></li>
+  </ul>
+</div>
+
+```
+
+*/
+
+.breadcrumb {
+  background: #F4F4F4;
+
+  ul {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $container-lg;
+    padding: 10px $container-padding-lg;
+    font-size: .8em;
+    text-align: left;
+    @include max-media($screen-md) {
+      max-width: 100%;
+      width: 100%;
+      padding: 10px;
+      width: 100%;
+      @include text-overflow();
+    }
+  }
+
+  ul li {
+    display: inline-block;
+    color: $text-color-sub;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $brand-main;
+    @include link-hover();
+
+    &:hover {
+      color: $brand-main;
+    }
+  }
+
+  .breadcrumb-icon--home {
+
+    &:before {
+      padding-right: 10px;
+      position: relative;
+      top: 2px;
+      font-family: 'Material Icons';
+      content: "\e88a";
+
+    }
+  }
+}
+
+.breadcrumb-icon--arrow {
+
+  &:before {
+    padding: 0 10px;
+    position: relative;
+    top: 2px;
+    font-family: 'Material Icons';
+    content: "\e5cc";
+    color: $text-color-sub;
+
+  }
+}

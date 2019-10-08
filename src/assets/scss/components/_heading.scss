@@ -1,25 +1,112 @@
-/*--------------------------------------------------------------//
+//--------------------------------------------------------------//
 // @ heading
-// ------------------------------------------------------------ */
+// ------------------------------------------------------------ //
 
 $img_path: "./../../assets/img/";
 
-.heading01{
+
+// @ heading top
+// ------------------------------------------------------------ //
+
+.heading-top {
+  margin: 0;
+  padding: 15px;
+  background: $brand-main-gradient;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heading-sidebar {
+  margin: 0 0 10px;
+  padding: 15px;
+  background: $brand-main-gradient;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
 
 }
 
-.heading02{
 
+
+// @ heading01
+// ------------------------------------------------------------ //
+
+@mixin heading01 {
+  margin: 50px 0 40px;
+  padding: 0 0 15px;
+  border-bottom: 3px $brand-main solid;
+  font-size: 26px;
+  font-weight: 600;
 }
 
-.heading03{
-
+.heading01 {
+  @include heading01;
+  .entry-container &{
+    @include heading01;
+  }
 }
 
-.heading04{
+// @ heading02
+// ------------------------------------------------------------ //
 
+@mixin heading02 {
+  margin: 50px 0 30px;
+  padding: 20px;
+  background: $brand-main-gradient;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.heading05{
+.heading02 {
+  @include heading02;
+  .entry-container &{
+    @include heading02;
+  }
+}
 
+// @ heading03
+// ------------------------------------------------------------ //
+
+@mixin heading03 {
+  margin: 50px 0 30px;
+  padding: 10px 20px;
+  border-left: 4px $brand-main solid;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.heading03 {
+  @include heading03;
+  .entry-container &{
+    @include heading03;
+  }
+}
+
+// @ heading04
+// ------------------------------------------------------------ //
+
+@mixin heading04 {
+  margin: 50px 0 30px;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.heading04 {
+  @include heading04;
+  .entry-container &{
+    @include heading04;
+  }
+}
+
+// @ entry-container時のタグ指定
+// ------------------------------------------------------------ //
+
+
+.entry-container {
+  h1 {@include heading01;}
+  h2 {@include heading02;}
+  h3 {@include heading03;}
+  h4 {@include heading04;}
 }
