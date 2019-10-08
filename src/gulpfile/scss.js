@@ -41,14 +41,17 @@ function scssCompile(distDir) {
       .pipe(gulp.dest(distDir))
 }
 
+
 if(config.mode.cms){
-  gulp.task('scss', function(){
+  gulp.task('scss', function(done){
     scssCompile(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name + config.path.css);
     scssCompile(config.path.cms + config.path.cms_dir  + config.path.cms_theme_path + config.path.cms_theme_name + config.path.styleguile_cms + config.path.css);
+    done();
   });
 }else if(config.mode.static){
-  gulp.task('scss', function(){
+  gulp.task('scss', function(done){
     scssCompile(config.path.dist + config.path.css);
+    done();
   });
 }
 

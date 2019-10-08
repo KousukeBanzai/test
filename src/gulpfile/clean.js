@@ -17,11 +17,13 @@ var $           = require('gulp-load-plugins')({
 });
 
 if(config.mode.static){
-  gulp.task('clean', function() {
+  gulp.task('clean', function(done) {
     return del([config.path.dist],{force:true});
+    done();
   });
 }else if(config.mode.cms){
-  gulp.task('clean', function() {
+  gulp.task('clean', function(done) {
     return del([config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name],{force:true});
+    done();
   });
 }

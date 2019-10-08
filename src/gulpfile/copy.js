@@ -40,12 +40,14 @@ function copyAssets(distDir) {
 }
 
 if(config.mode.static){
-  gulp.task('copy.assets', function() {
+  gulp.task('copy.assets', function(done) {
     copyAssets(config.path.dist);
+    done();
   });
 }else if(config.mode.cms){
-  gulp.task('copy.assets', function() {
+  gulp.task('copy.assets', function(done) {
     copyAssets(config.path.cms + config.path.cms_dir  + config.path.cms_theme_path + config.path.cms_theme_name);
     copyAssets(config.path.cms + config.path.cms_dir  + config.path.cms_theme_path + config.path.cms_theme_name + config.path.styleguile_cms);
+    done();
   });
 }

@@ -30,12 +30,14 @@ function bsFunction(distDir,proxy) {
 }
 
 if(config.mode.static){
-  gulp.task('bs', function() {
+  gulp.task('bs', function(done) {
     bsFunction(config.path.dist,config.proxy);
+    done();
   });
 }else if(config.mode.cms){
-  gulp.task('bs', function() {
+  gulp.task('bs', function(done) {
     bsFunction(config.path.dist,config.proxy);
+    done();
   });
 }
 
@@ -43,6 +45,7 @@ if(config.mode.static){
 // @ $bs-reload | オートリロード
 //========================================================================
 
-gulp.task('bs-reload', function () {
+gulp.task('bs-reload', function (done) {
   browserSync.reload();
+  done();
 });

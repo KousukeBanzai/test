@@ -11,7 +11,8 @@ var $           = require('gulp-load-plugins')({
   replaceString: /\bgulp[\-.]/
 });
 
-gulp.task('hologram', function() {
+gulp.task('hologram', function(done) {
   return gulp.src('./hologram/config.yml')
     .pipe($.hologram());
+    done();
 });

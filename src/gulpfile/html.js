@@ -16,13 +16,15 @@ function copyHtml(distDir) {
 }
 
 if(config.mode.static) {
-  gulp.task('copy.html', function () {
+  gulp.task('copy.html', function (done) {
     if (config.mode.html === true) {
       copyHtml(config.path.dist)
     }
+    done();
   });
 }else if((config.mode.cms && config.mode.cmstype === "acms")){
-  gulp.task('copy.html', function () {
+  gulp.task('copy.html', function (done) {
     copyHtml(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name + config.path.html)
+    done();
   });
 }

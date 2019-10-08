@@ -21,13 +21,15 @@ function imagemin(distDir){
 }
 
 if(config.mode.static){
-  gulp.task('imagemin', function(){
+  gulp.task('imagemin', function(done){
     imagemin(config.path.dist + config.path.img)
     imagemin(config.path.styleguile + config.path.img)
+    done();
   });
 }else if(config.mode.cms){
-  gulp.task('imagemin', function(){
+  gulp.task('imagemin', function(done){
     imagemin(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name + config.path.img)
     imagemin(config.path.cms + config.path.cms_dir  + config.path.cms_theme_path + config.path.cms_theme_name + config.path.styleguile_cms + config.path.img)
+    done();
   });
 }
