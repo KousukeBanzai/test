@@ -21,7 +21,7 @@ var bourbon    = require("bourbon").includePaths,
 // ------------------------------
 
 function scssCompile(distDir) {
-  gulp.src(config.path.source + config.path.sass + '/**/*.scss')
+   gulp.src(config.path.source + config.path.sass + '/**/*.scss')
       .pipe($.plumber({
         errorHandler: $.notify.onError("Error: <%= error.message %>")
       }))
