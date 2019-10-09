@@ -9,10 +9,8 @@ var $           = require('gulp-load-plugins')({
   replaceString: /\bgulp[\-.]/
 });
 
-if(config.mode.cms) {
-  gulp.task("php", function (done) {
-    gulp.src(config.path.source + config.path.php + '/**/*')
-      .pipe(gulp.dest(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name))
-      done();
-  });
-}
+gulp.task("php", function (done) {
+  gulp.src(config.path.source + config.path.php + '/**/*')
+    .pipe(gulp.dest(config.path.dist))
+  done();
+});

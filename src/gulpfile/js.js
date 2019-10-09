@@ -35,17 +35,8 @@ function jsCompile(distDir) {
     .pipe(gulp.dest(distDir))
 }
 
-if(config.mode.cms){
-  gulp.task('js',function(done){
-    jsCompile(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name + config.path.js);
-    jsCompile(config.path.cms + config.path.cms_dir  + config.path.cms_theme_path + config.path.cms_theme_name + config.path.styleguile_cms + config.path.js);
-    done();
-  });
-}else if(config.mode.static){
-  gulp.task('js',function(done){
-    jsCompile(config.path.dist + config.path.js);
-    jsCompile(config.path.styleguile + config.path.js);
-    done();
-  });
-}
-
+gulp.task('js',function(done){
+  jsCompile(config.path.dist + config.path.js);
+  jsCompile(config.path.dist + config.path.styleguile_dist + config.path.js);
+  done();
+});

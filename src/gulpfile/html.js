@@ -11,20 +11,18 @@ var $           = require('gulp-load-plugins')({
 
 function copyHtml(distDir) {
   //html
-  gulp.src([config.path.source + config.path.html + '**/*.html', config.path.source + config.path.html + '!/' + 'node_modules/**/*.html', config.path.source + config.path.html + '!/' + 'vendor/**/*.html', config.path.source + config.path.html + '!/' + 'hologram/**/*.html', , config.path.source + config.path.html + '!/' + 'ejs/**/*.html', config.path.source + config.path.html + '!/' + 'assets/**/*.html'],{ base: 'html' })
+  gulp.src([
+    config.path.source + config.path.html + '**/*.html',
+    config.path.source + config.path.html + '!/' + 'node_modules/**/*.html',
+    config.path.source + config.path.html + '!/' + 'vendor/**/*.html',
+    config.path.source + config.path.html + '!/' + 'hologram/**/*.html',
+    config.path.source + config.path.html + '!/' + 'ejs/**/*.html',
+    config.path.source + config.path.html + '!/' + 'assets/**/*.html'
+    ],{base: 'html'})
     .pipe(gulp.dest(distDir))
 }
 
-if(config.mode.static) {
-  gulp.task('copy.html', function (done) {
-    if (config.mode.html === true) {
-      copyHtml(config.path.dist)
-    }
-    done();
-  });
-}else if((config.mode.cms && config.mode.cmstype === "acms")){
-  gulp.task('copy.html', function (done) {
-    copyHtml(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name + config.path.html)
-    done();
-  });
-}
+gulp.task('html', function (done) {
+  copyHtml(config.path.dist);
+  done();
+});

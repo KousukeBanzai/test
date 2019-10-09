@@ -1,6 +1,6 @@
 
 //========================================================================
-// @ クリーン | ディレクトリ削除
+// @ クリーン
 //========================================================================
 
 var gulp        = require('gulp');
@@ -12,18 +12,16 @@ var $           = require('gulp-load-plugins')({
 
 var gulp        = require('gulp');
 var $           = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'gulp.*'],
-  replaceString: /\bgulp[\-.]/
+                  pattern: ['gulp-*', 'gulp.*'],
+                  replaceString: /\bgulp[\-.]/
 });
 
-if(config.mode.static){
-  gulp.task('clean', function(done) {
-    return del([config.path.dist],{force:true});
-    done();
-  });
-}else if(config.mode.cms){
-  gulp.task('clean', function(done) {
-    return del([config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name],{force:true});
-    done();
-  });
-}
+// ------------------------------------------------------------
+
+gulp.task('clean', function(done) {
+  return del([
+    config.path.dist + 'assets/',
+    config.path.dist + 'docs/',
+  ],{force:true});
+  done();
+});

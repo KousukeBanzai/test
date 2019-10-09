@@ -7,8 +7,8 @@
 
 var gulp        = require('gulp');
 var $           = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'gulp.*'],
-  replaceString: /\bgulp[\-.]/
+                  pattern: ['gulp-*', 'gulp.*'],
+                  replaceString: /\bgulp[\-.]/
 });
 
 gulp.task('hologram', function(done) {

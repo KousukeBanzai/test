@@ -5,9 +5,7 @@ config = {
     "source": "./",
     "dist": "../dist/",
     "styleguile":"../docs/styleguide/",
-    "styleguile_cms":"docs/styleguide/",
-    "cms":"../cms/",
-    "ejs": "ejs/",
+    "styleguile_dist":"docs/styleguide/",
     "sass": "assets/scss/",
     "css": "assets/css/",
     "img": "assets/img/",
@@ -18,11 +16,7 @@ config = {
     "js": "assets/js",
     "file": "assets/file/",
     "fonts": "assets/fonts/",
-    "dummy" : "assets/dummy/",
     "node" : "node_modules/",
-    "cms_dir":"wordpress/",
-    "cms_theme_path":"wp-content/themes/",
-    "cms_theme_name":"tokiyori_develop/"
   },
   "mode":{
     static:false,          // 静的モード

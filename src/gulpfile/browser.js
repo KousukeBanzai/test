@@ -34,11 +34,6 @@ if(config.mode.static){
     bsFunction(config.path.dist,config.proxy);
     done();
   });
-}else if(config.mode.cms){
-  gulp.task('bs', function(done) {
-    bsFunction(config.path.dist,config.proxy);
-    done();
-  });
 }
 
 //========================================================================

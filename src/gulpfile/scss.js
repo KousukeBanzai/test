@@ -5,18 +5,15 @@
 
 var gulp        = require('gulp');
 var $           = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'gulp.*'],
-  replaceString: /\bgulp[\-.]/
+                  pattern: ['gulp-*', 'gulp.*'],
+                  replaceString: /\bgulp[\-.]/
 });
 
 var browsers = [
     '> 3%'
 ];
 
-
-var bourbon    = require("bourbon").includePaths,
-    neat       = require("bourbon-neat").includePaths;
-
+// ------------------------------
 // @ Sassコンパイルタスクを関数化
 // ------------------------------
 
@@ -26,9 +23,7 @@ function scssCompile(distDir) {
         errorHandler: $.notify.onError("Error: <%= error.message %>")
       }))
       .pipe($.sourcemaps.init())
-      .pipe($.sass({
-        includePaths: [bourbon, neat]
-      }))
+      .pipe($.sass())
       .pipe($.postcss([
         // require('doiuse')({browsers: browsers}),
         // todo:ignoreする https://liginc.co.jp/206518
@@ -41,17 +36,9 @@ function scssCompile(distDir) {
       .pipe(gulp.dest(distDir))
 }
 
-
-if(config.mode.cms){
-  gulp.task('scss', function(done){
-    scssCompile(config.path.cms + config.path.cms_dir + config.path.cms_theme_path + config.path.cms_theme_name + config.path.css);
-    scssCompile(config.path.cms + config.path.cms_dir  + config.path.cms_theme_path + config.path.cms_theme_name + config.path.styleguile_cms + config.path.css);
-    done();
-  });
-}else if(config.mode.static){
-  gulp.task('scss', function(done){
-    scssCompile(config.path.dist + config.path.css);
-    done();
-  });
-}
+gulp.task('scss', function(done){
+  scssCompile(config.path.dist + config.path.css);
+  scssCompile(config.path.dist + config.path.styleguile_dist + config.path.css);
+  done();
+});
 
