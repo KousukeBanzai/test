@@ -9,4 +9,4 @@ documentation_assets: templates
 # Markdown をパースするときに実行する Ruby ファイル
 custom_markdown: markdown_renderer.rb
 # スタイルガイドの名前
-styleguide_name: 'tokiyori_develop_styleguide'
+styleguide_name: 'styleguide'

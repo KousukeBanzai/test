@@ -9,7 +9,6 @@ var dir = requireDir('./gulpfile');
 //========================================================================
 
 var gulp        = require('gulp');
-var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var $           = require('gulp-load-plugins')({
                     pattern: ['gulp-*', 'gulp.*'],
@@ -20,47 +19,27 @@ var $           = require('gulp-load-plugins')({
 // @ ローカルサーバー起動 監視タスクON
 //========================================================================
 
-gulp.task('run', function (callback) {
-    runSequence(
-        'bs',
-        'watch',
-        callback);
+gulp.task('watch', function(){
+  gulp.watch(config.path.source + config.path.sass + '**/*.scss').on('change', gulp.series('scss','bs-reload'));
+  gulp.watch(config.path.source + config.path.js + '**/*.js').on('change', gulp.series('js','bs-reload'));
+  gulp.watch(config.path.source + config.path.img + '**/*.jpg').on('change', gulp.series('imagemin','bs-reload'));
+  gulp.watch(config.path.source + config.path.img + '**/*.png').on('change', gulp.series('imagemin','bs-reload'));
+  gulp.watch(config.path.source + config.path.php + '**/*.php').on('change', gulp.series('php','bs-reload'));
+  gulp.watch(config.path.source + config.path.js + 'lib/**/*').on('change', gulp.series('copy.assets','bs-reload'));
+  gulp.watch(config.path.source + config.path.svg + '**/*').on('change', gulp.series('copy.assets','bs-reload'));
+  gulp.watch(config.path.source + config.path.file + '**/*').on('change', gulp.series('copy.assets','bs-reload'));
 });
+
+gulp.task('run',gulp.series(
+  'bs',
+  gulp.parallel('watch')
+));
 
 //========================================================================
 // @ 全タスク実行
 //========================================================================
 
-gulp.task('build', function (callback) {
-  if(config.mode.static === true && config.mode.ejs === false) {
-    return runSequence(
-        'clean',
-        ['scss', 'hologram', 'js', 'copy.html', 'copy.assets'],
-        'imagemin',
-        callback
-    );
-  }else if(config.mode.static === true && config.mode.ejs === true){
-    return runSequence(
-        'clean',
-        ['scss', 'hologram', 'js', 'ejs.html', 'copy.html', 'copy.assets'],
-        'imagemin',
-        callback
-    );
-  }
-  if(config.mode.cms === true && config.mode.cmstype === "wordpress") {
-    return runSequence(
-        'clean',
-        ['scss', 'hologram', 'js','wp.assets','php', 'copy.assets'],
-        'imagemin',
-        callback
-    );
-  }
-  if(config.mode.cms === true && config.mode.cmstype === "acms") {
-    return runSequence(
-        'clean',
-        ['scss', 'hologram', 'js', 'copy.html' , 'copy.assets'],
-        'imagemin',
-        callback
-    );
-  }
-});
+gulp.task('build',gulp.series(
+  'clean',
+  gulp.parallel('scss', 'hologram','js','html','ejs','php','copy.assets', 'imagemin')
+));

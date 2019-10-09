@@ -15,11 +15,7 @@ var $           = require('gulp-load-plugins')({
 
 function bsFunction(distDir,proxy) {
   if(proxy){
-    browserSync({
-      server: {
-        baseDir: config.path.dist
-      }
-    });
+
   }else{
     browserSync({
       server: {
@@ -29,16 +25,19 @@ function bsFunction(distDir,proxy) {
   }
 }
 
-if(config.mode.static){
-  gulp.task('bs', function(done) {
-    bsFunction(config.path.dist,config.proxy);
-    done();
-  });
-}
 
 //========================================================================
 // @ $bs-reload | オートリロード
 //========================================================================
+
+gulp.task('bs', function(done) {
+  browserSync({
+    server: {
+      baseDir: config.path.dist
+    }
+  });
+  done();
+});
 
 gulp.task('bs-reload', function (done) {
   browserSync.reload();
