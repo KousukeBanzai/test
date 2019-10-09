@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "build",
-    "gulp run": "run"
+    "gulp run": "run",
+    "gulp build": "build"
   },
   "author": "kousuke banzai",
   "license": "ISC",
