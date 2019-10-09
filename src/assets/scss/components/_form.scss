@@ -828,7 +828,7 @@ input[type=checkbox], input[type=checkbox]:checked {
   &__title {
     font-size: 16px;
     font-weight: bold;
-    color: $swatch-red;
+    color: $brand-error;
 
     @include max-media($screen-sm) {
       font-size: 13px;
