@@ -3,7 +3,7 @@
 source: ../assets/scss
 # スタイルガイドの書き出し先のディレクトリ
 #destination: ../../docs/styleguide
-destination: ../../cms/wordpress/wp-content/themes/tokiyori_develop/docs/
+destination: ../../docs/
 # スタイルガイドのテンプレートがあるディレクトリ
 documentation_assets: templates
 # Markdown をパースするときに実行する Ruby ファイル

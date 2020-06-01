@@ -1,1 +1,0 @@
-$(function(){$(".is-load").length&&$(".js-load-fadein").removeClass("is-load"),$(".js-slider-pro").sliderPro({height:"504",width:1280,visibleSize:"100%",forceSize:"fullWidth",autoSlideSize:!0,slideDistance:0,arrows:!0,centerImage:!0,buttons:!1,responsive:!1})});

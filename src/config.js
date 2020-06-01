@@ -3,7 +3,7 @@ config = {
   "proxy": "",
   "path": {
     "source": "./",
-    "dist": "../dist/",
+    "dist": "../",
     "styleguile":"../docs/styleguide/",
     "styleguile_dist":"docs/styleguide/",
     "sass": "assets/scss/",

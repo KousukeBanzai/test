@@ -13,10 +13,10 @@ var $           = require('gulp-load-plugins')({
 
 function jsCompile(distDir) {
   // jquery
-  gulp.src(config.path.source + config.path.node + 'jquery/dist/jquery.js') //node_moduleからファイルを読み込み
-  // .pipe($.uglify()) //難読化の場合はコメントアウトを外す
-    .pipe($.babel())
-    .pipe(gulp.dest(distDir));
+  // gulp.src(config.path.source + config.path.node + 'jquery/dist/jquery.js')
+  // // .pipe($.uglify()) //難読化の場合はコメントアウトを外す
+  //   .pipe($.babel())
+  //   .pipe(gulp.dest(distDir));
 
   // form.js | フォームバリデーション関係Js
   gulp.src([config.path.source + config.path.js + '/form/lib/*.js',config.path.source + config.path.js + '/form/form.js'])

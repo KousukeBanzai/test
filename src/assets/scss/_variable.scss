@@ -21,10 +21,11 @@ $brand-main             :  #8CCE4A;
 $brand-main-darker      :  #79A849;
 $brand-main-darken      :  #79A849;
 $brand-main-lighter     :  #DCF0C8;
-$brand-main-lighten     :  #DCF0C8;
+$brand-main-lighten     :  #EFFAE3;
 
 $brand-secondary        :  #81D1E8;
 $brand-accent01         :  #FFC400;
+$brand-accent01-darker  :  #deab00;
 $brand-accent02         :  #AB86DE;
 
 // @ Scaffolding
@@ -39,26 +40,28 @@ $border-color-base      :  #DEDEDE;
 
 // link color
 // ------------------------------------------------------------
-$link-color             :  #00A3EB;
+$link-color             :  #00a3eb;
+$link-hover-color       :  #00a3eb;
+$link-active-color             :  #00a3eb;
 $hover-bg               :  #00A3EB;
+$link-visited-color     :  #112e91;
 
 // ============================================================
 //  @Typography
 // ============================================================
 
-$font-family-gothic      :  'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','ヒラギノ角ゴシック','Hiragino Sans','segoe ui','メイリオ', Meiryo,YuGothic,'Yu Gothic',-apple-system, BlinkMacSystemFont,sans-serif;
+$font-family-gothic      :  'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','ヒラギノ角ゴシック','Hiragino Sans',YuGothic,'Yu Gothic','游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic','segoe ui','メイリオ', Meiryo,-apple-system, BlinkMacSystemFont,sans-serif;
+$font-family-ie          :  'メイリオ', Meiryo,'segoe ui',YuGothic,'Yu Gothic',-apple-system, BlinkMacSystemFont,sans-serif;
 $font-family-monospace   :  Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-kakugostd   :  'ヒラギノ角ゴ Std W3','Hiragino Kaku Gothic Std', sans-serif;
-$font-family-notoserif   :  'Noto Serif Japanese', sans-serif;
-$font-family-opensans    :  'Open Sans', sans-serif;
-$font-family-sawarabi    :  'Sawarabi Mincho', sans-serif;
+$font-family-notosans    :  'Noto Sans JP',  "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN","メイリオ", Meiryo, sans-serif;
+$font-family-nunito      :  'Nunito', sans-serif;
 
 // @ ベースフォント指定
 $font-family-base        :  $font-family-gothic;
 
 $font-size-base          :  14px;
 $font-size-base-tab      :  15px;
-$font-size-base-sp      :  15px;
+$font-size-base-sp       :  15px;
 
 $font-size-large         :  ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small         :  ceil(($font-size-base * 0.85)); // ~12px
@@ -75,8 +78,9 @@ $font-size-h6            :  ceil(($font-size-base * 0.85)); // ~12px
 // ============================================================
 $line-height-base        :  1.7;
 $line-height-heading     :  1.5;
+$headings-line-height :$line-height-heading ;
 
-// ============================================================
+  // ============================================================
 // @ Tables
 // ============================================================
 
@@ -95,7 +99,7 @@ $table-border-color      :  #ddd;
 $input-bg                :  #fff;
 $input-hover-bg          :  #f4f4f4;
 $input-bg-disabled       :  $gray-lighter;
-$input-pad               :  .4em .6em .4em;
+$input-pad               :  .7em .6em .6em;
 $input-pad-sm            :  .8em .6em;
 $input-color             :  $text-color;
 $input-border            :  #ccc;
@@ -104,16 +108,21 @@ $input-border            :  #ccc;
 // @ Z-index master list
 // ============================================================ //
 
-$zindex-slider           :  500;
+$zindex-slider           :  -1;
+$zindex-wrapper          :  1;
+$zindex-footer           :  800;
 $zindex-header           :  1000;
-$zindex-dropdown         :  1000;
+$zindex-footer-fixed-banner:  1000;
+$zindex-offcanvas-btn    :  1030;
 $zindex-popover          :  1060;
+
 $zindex-tooltip          :  1070;
 $zindex-navbar-fixed     :  1030;
 $zindex-nav-menu         :  1033;
-$zindex-navbar-torigger  :  1035;
-$zindex-modal-background :  1040;
-$zindex-modal            :  1050;
+$zindex-pagetop          :  3000;
+$zindex-modal-background :  5000;
+$zindex-modal            :  5010;
+
 
 // ============================================================ //
 // @ Media queries breakpoints
@@ -138,24 +147,24 @@ $screen-5ls              :  568px;
 $screen-6ls              :  667px;
 
 // Medium screen
-$screen-md               :  769px;
+$screen-md               :  1024px;
 $screen-md-min           :  $screen-sm + 1;
 $screen-desktop          :  $screen-md-min;
 
 // Small large screen
-$screen-slg               :  980px;
+$screen-slg               :  1279px;
 $screen-slg-min           :  $screen-md + 1;
 
 // Mid large screen
-$screen-mlg               :  1024px;
+$screen-mlg               :  1280px;
 $screen-mlg-min           :  $screen-slg + 1;
 
 // Large screen
-$screen-lg               :   1180px;
+$screen-lg               :   1680px;
 $screen-lg-min           :   $screen-mlg + 1;
 
 // Xlarge screen
-$screen-xlg               :   1980px;
+$screen-xlg               :   1920px;
 $screen-xlg-min           :   $screen-lg + 1;
 
 // ============================================================ //
@@ -164,8 +173,9 @@ $screen-xlg-min           :   $screen-lg + 1;
 
 //## Define the maximum width of `.container` for different screen sizes.
 
-$container-padding-lg    : 30px;
-$container-padding-md    : 3%;
+$container-padding-lg    : 90px;
+$container-padding-slg   : 50px;
+$container-padding-md    : 2.7848101%;
 $container-padding-sm    : 15px;
 
 // Small screen / tablet
@@ -183,6 +193,16 @@ $container-large-desktop : ($screen-lg + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
 $container-lg            : $screen-lg + ($container-padding-lg *2);
 
+// ============================================================ //
+// @ layout parts style
+// ============================================================ //
+
+// header
+// ------------------------------------------------------------
+
+$header-height-pc : 90px;
+$header-height-md : 70px;
+
 
 // ============================================================ //
 // @ transition & hover opacity
@@ -190,3 +210,9 @@ $container-lg            : $screen-lg + ($container-padding-lg *2);
 
 $hover-transition        :  .3s;
 $hover-opacity           :  .7;
+
+// ============================================================ //
+// @ acms system setting
+// ============================================================ //
+
+$acms-grid-g : 10px;

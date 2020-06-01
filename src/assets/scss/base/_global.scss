@@ -9,6 +9,9 @@ html{
   @include max-media($screen-sm){
     font-size: $font-size-base-tab;
   }
+  &.ie{
+    font-family: $font-family-ie;
+  }
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -28,4 +31,32 @@ h6{font-size: $font-size-h6;}
 p{
   display: block;
   margin: 0 0 1em 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a {
+  outline:none;
+  &:focus, &:link {
+    color: $link-color;
+  }
+  &:link{
+    color: $link-color;
+    text-decoration: underline;
+  }
+  &:visited{
+    color: $link-visited-color;
+    text-decoration: underline;
+  }
+  &:hover{
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &:active{
+    color: $link-active-color;
+    text-decoration: none;
+  }
+
 }

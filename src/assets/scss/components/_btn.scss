@@ -49,10 +49,17 @@ category: btn
 // @ btn-group
 // ------------------------------------------------------------
 
+@mixin btnMargin() {
+  .btn {
+    margin: 0 10px 8px;
+  }
+}
+
 .btn-group {
   display: flex;
   -js-display: flex;
   flex-flow: row wrap;
+  @include btnMargin();
 
 
   &--left {
@@ -60,20 +67,25 @@ category: btn
     -js-display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    @include btnMargin();
 
   }
+
   &--center {
     display: flex;
     -js-display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    @include btnMargin();
 
   }
+
   &--right {
     display: flex;
     -js-display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+    @include btnMargin();
 
   }
 }
@@ -94,3 +106,205 @@ category: btn
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
 }
+
+// @ btn01
+// ------------------------------------------------------------ */
+
+@mixin btn01($color,$textColor,$hoverBgC) {
+  @include btn-reset;
+  //
+  display: inline-block;
+  border-radius: 100px;
+  padding: 18px 85px;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: $textColor;
+  background: $color;
+  @include transition-delay();
+
+  &:active, &:focus, &:link, &:visited {
+    color: $textColor;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $hoverBgC;
+    text-decoration: none;
+
+  }
+
+}
+
+.btn01-lg {
+  @include btn01($brand-main, #fff,$brand-main-darken);
+
+  &--brand{
+    @include btn01($brand-main, #fff ,$brand-main-darken);
+  }
+
+  &--accent {
+    @include btn01($brand-accent01, #fff ,$brand-accent01-darker);
+  }
+
+  &--border {
+    @include btn01(#fff, $text-color,$brand-main-lighten);
+    padding: 16px 85px;
+    border: 2px $brand-main solid;
+
+  }
+
+  &--primary {
+    @include btn01($brand-primary, #fff ,darken($brand-primary,.15));
+  }
+
+  &--success {
+    @include btn01($brand-success, #fff,darken($brand-success,.15));
+  }
+
+  &--warning {
+    @include btn01($brand-warning, #fff,darken($brand-warning,.15));
+  }
+
+  &--error {
+    @include btn01($brand-error, #fff,darken($brand-error,.15));
+  }
+
+  &--disable {
+    @include btn01($brand-disable, #fff,darken($brand-disable,.15));
+  }
+}
+
+// @ btn01-md
+// ------------------------------------------------------------ */
+
+@mixin btn01-md($color,$textColor,$hoverBgC) {
+  @include btn-reset;
+  //
+  display: inline-block;
+  border-radius: 100px;
+  padding: 14px 53px;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: $textColor;
+  background: $color;
+  @include transition-delay();
+
+  &:active, &:focus, &:link, &:visited {
+    color: $textColor;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $hoverBgC;
+    text-decoration: none;
+  }
+}
+
+.btn01-md {
+  @include btn01-md($brand-main, #fff,$brand-main-darken);
+
+  &--brand{
+    @include btn01-md($brand-main, #fff,$brand-main-darken);
+  }
+
+  &--accent {
+    @include btn01-md($brand-accent01, #fff,$brand-accent01-darker);
+  }
+
+  &--border {
+    @include btn01-md(#fff, $text-color,$brand-main-lighter);
+    padding: 12px 53px;
+    border: 2px $brand-main solid;
+  }
+
+  &--primary {
+    @include btn01-md($brand-primary, #fff,darken($brand-primary,.15));
+  }
+
+  &--success {
+    @include btn01-md($brand-success, #fff,darken($brand-success,.15));
+  }
+
+  &--warning {
+    @include btn01-md($brand-warning, #fff,darken($brand-warning,.15));
+  }
+
+  &--error {
+    @include btn01-md($brand-error, #fff,darken($brand-error,.15));
+  }
+
+  &--disable {
+    @include btn01-md($brand-disable, #fff,darken($brand-disable,.15));
+  }
+}
+
+// @ btn01-sm
+// ------------------------------------------------------------ */
+
+@mixin btn01-sm($color,$textColor,$hoverBgC) {
+  @include btn-reset;
+  //
+  display: inline-block;
+  border-radius: 100px;
+  padding: 8px 25px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: $textColor;
+  background: $color;
+  @include transition-delay();
+
+  &:active, &:focus, &:link, &:visited {
+    color: $textColor;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $hoverBgC;
+    text-decoration: none;
+  }
+}
+
+.btn01-sm {
+  @include btn01-sm($brand-main, #fff,$brand-main-darken);
+
+  &--brand{
+    @include btn01-sm($brand-main, #fff,$brand-main-darken);
+  }
+
+  &--accent {
+    @include btn01-sm($brand-accent01, #fff,$brand-accent01-darker);
+  }
+
+  &--border {
+    @include btn01-sm(#fff, $text-color,$brand-main-lighter);
+    padding: 6px 25px;
+    border: 2px $brand-main solid;
+  }
+
+  &--primary {
+    @include btn01-sm($brand-primary, #fff,darken($brand-primary,.15));
+  }
+
+  &--success {
+    @include btn01-sm($brand-success, #fff,darken($brand-success,.15));
+  }
+
+  &--warning {
+    @include btn01-sm($brand-warning, #fff,darken($brand-warning,.15));
+  }
+
+  &--error {
+    @include btn01-sm($brand-error, #fff,darken($brand-error,.15));
+  }
+
+  &--disable {
+    @include btn01-sm($brand-disable, #fff,darken($brand-disable,.15));
+  }
+}
+

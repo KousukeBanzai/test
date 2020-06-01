@@ -31,7 +31,7 @@
  }
 
 .hidden--sm {
-  @include max-media($screen-sm) {
+  @include max-media($screen-6ls) {
     display: none !important;
   }
 }

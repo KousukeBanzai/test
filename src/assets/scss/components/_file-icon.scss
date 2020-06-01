@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------//
+// @ icon-box
+// ------------------------------------------------------------ */
+
+$img_path: "./../../assets/img/";
+
+// @ file-group
+// ------------------------------------------------------------
+
+@mixin fileMargin() {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+//.file-group {
+//  display: flex;
+//  -js-display: flex;
+//  flex-flow: row wrap;
+//  @include btnMargin();
+//
+//
+//  &--left {
+//    display: flex;
+//    -js-display: flex;
+//    flex-flow: row wrap;
+//    justify-content: flex-start;
+//    @include btnMargin();
+//
+//  }
+//
+//  &--center {
+//    display: flex;
+//    -js-display: flex;
+//    flex-flow: row wrap;
+//    justify-content: center;
+//    @include btnMargin();
+//
+//  }
+//
+//  &--right {
+//    display: flex;
+//    -js-display: flex;
+//    flex-flow: row wrap;
+//    justify-content: flex-end;
+//    @include btnMargin();
+//
+//  }
+//}
+
+// @ icon-group
+// ------------------------------------------------------------
+
+//.file-icon{
+//  width: 53px;
+//  margin: 0 10px 5px;
+//  display: block;
+//}

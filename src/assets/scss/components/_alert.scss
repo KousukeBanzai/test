@@ -33,76 +33,76 @@ category: alert
 */
 
 
-.alert {
-  position: relative;
-  margin: 2em 0;
-  padding: 20px 20px 20px 50px;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-
-  @include max-media($screen-md){
-    margin: 1.5em 0;
-  }
-  @include max-media($screen-sm){
-    margin: 1em 0;
-  }
-
-  &:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 1.1rem;
-    margin: auto;
-    height: 1em;
-    vertical-align: middle;
-    white-space: nowrap;
-    font-size: 1.5rem;
-
-  }
-
-  &__text{
-    margin-bottom: 0;
-  }
-
-}
-
-.alert--primary{
-  border: 1px solid $brand-primary;
-  background-color: lighten($brand-primary,50);
-  &:before{
-    @extend .material-icons;
-    content: "check";
-    color: $brand-primary;
-  }
-}
-.alert--success{
-  border: 1px solid $brand-success;
-  background-color: lighten($brand-success,55);
-  &:before{
-    @extend .material-icons;
-    content: "check_circle";
-    color: $brand-success;
-  }
-}
-.alert--warning{
-  border: 1px solid $brand-warning;
-  background-color: lighten($brand-warning,42);
-  &:before{
-    @extend .material-icons;
-    content: "warning";
-    color: $brand-warning;
-  }
-}
-.alert--error{
-  border: 1px solid $brand-error;
-  background-color: $brand-error;
-  color: #fff;
-  &:before{
-    @extend .material-icons;
-    content: "error";
-    color: #fff;
-  }
-}
+//.alert {
+//  position: relative;
+//  margin: 2em 0;
+//  padding: 20px 20px 20px 50px;
+//  border-radius: 5px;
+//  display: inline-block;
+//  font-size: 16px;
+//  width: 100%;
+//  box-sizing: border-box;
+//
+//  @include max-media($screen-md){
+//    margin: 1.5em 0;
+//  }
+//  @include max-media($screen-sm){
+//    margin: 1em 0;
+//  }
+//
+//  &:before {
+//    position: absolute;
+//    top: 0;
+//    bottom: 0;
+//    left: 1.1rem;
+//    margin: auto;
+//    height: 1em;
+//    vertical-align: middle;
+//    white-space: nowrap;
+//    font-size: 1.5rem;
+//
+//  }
+//
+//  &__text{
+//    margin-bottom: 0;
+//  }
+//
+//}
+//
+//.alert--primary{
+//  border: 1px solid $brand-primary;
+//  background-color: lighten($brand-primary,50);
+//  &:before{
+//    @extend .material-icons;
+//    content: "check";
+//    color: $brand-primary;
+//  }
+//}
+//.alert--success{
+//  border: 1px solid $brand-success;
+//  background-color: lighten($brand-success,55);
+//  &:before{
+//    @extend .material-icons;
+//    content: "check_circle";
+//    color: $brand-success;
+//  }
+//}
+//.alert--warning{
+//  border: 1px solid $brand-warning;
+//  background-color: lighten($brand-warning,42);
+//  &:before{
+//    @extend .material-icons;
+//    content: "warning";
+//    color: $brand-warning;
+//  }
+//}
+//.alert--error{
+//  border: 1px solid $brand-error;
+//  background-color: $brand-error;
+//  color: #fff;
+//  &:before{
+//    @extend .material-icons;
+//    content: "error";
+//    color: #fff;
+//  }
+//}

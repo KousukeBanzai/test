@@ -41,5 +41,5 @@ gulp.task('run',gulp.series(
 
 gulp.task('build',gulp.series(
   'clean',
-  gulp.parallel('scss', 'hologram','js','html','ejs','php','copy.assets', 'imagemin')
+  gulp.parallel('scss', 'hologram','js','copy.assets', 'imagemin')
 ));

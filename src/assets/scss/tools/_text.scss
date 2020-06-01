@@ -39,31 +39,57 @@
 //</table>
 
 
-    /* @ text state
-    // ------------------------------------------------------------ */
+/* @ text state
+// ------------------------------------------------------------ */
 
-.text-center{
+
+.text-center {
   text-align: center;
 }
-.text-left{
+
+.text-left {
   text-align: left;
 }
-.text-right{
-  text-align: right;
-}
 
-.text-bold {
-  font-weight: bold !important;
+.text-right {
+  text-align: right;
 }
 
 .text-normal {
   font-weight: normal !important;
 }
 
+.text-emphasis {
+  color: #8cce4a;
+  font-style: normal;
+  font-weight: bold !important;
+
+  @include max-media($screen-6ls) {
+    color: $brand-accent01;
+  }
+}
+
+.text-important {
+  color: #ab86de;
+  font-weight: bold !important;
+}
+
+.text-negation {
+  text-decoration: line-through;
+}
+
 .nowrap {
   white-space: nowrap !important
 }
 
-.text-overflow{
+.text-overflow {
   @include text-overflow();
+}
+
+/* ============================================================ //
+// leter spage
+// ============================================================ */
+
+.ls-1{
+  letter-spacing: -.1em;
 }

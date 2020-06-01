@@ -3,30 +3,41 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+$svg_path: "./../../assets/svg/";
 
 @mixin blockquote {
-  background-color: #f2f2f2;
-  line-height: 1.8;
+  padding: 32px 58px;
   position: relative;
-  padding: 40px;
-  border: solid 1px #ccc;
-  border-radius: 5px;
-  margin: 5em 0;
-  @include max-media($screen-md) {
-    margin: 3em 0;
-  }
-  @include max-media($screen-sm) {
-    margin: 1.5em 0;
+  border: none;
+  background: $brand-main-lighten;
+  width: calc(100% - #{$acms-grid-g} * 2);
+
+  &:before{
+    content: url("#{$svg_path}/blockquoto-item.svg");
+    position: absolute;
+    top: 16px;
+    left: 16px;
   }
 
-}
+  &:after{
+    content: url("#{$svg_path}/blockquoto-item.svg");
+    transform: rotate(180deg);;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
 
-.blockquote {
-  @include blockquote;
-}
-
-.entry-container {
-  blockquote {
-    @include blockquote;
+  p{
+    margin: 0;
   }
 }
+
+//.blockquote {
+//  @include blockquote;
+//}
+//
+//.entry-container {
+//  blockquote {
+//    @include blockquote;
+//  }
+//}

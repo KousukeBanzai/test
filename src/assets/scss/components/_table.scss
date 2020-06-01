@@ -4,6 +4,79 @@
 
 $img_path: "./../../assets/img/";
 
+/* ============================================================ //
+// @ table01
+// ============================================================ */
+
+.table01 {
+  width: 100%;
+
+  th, td {
+    padding: 12px 17px;
+    border: $border-color-base 1px solid;
+  }
+
+  th {
+    background: $brand-main-lighter;
+    text-align: left;
+    font-family: $font-family-notosans;
+    font-weight: bold;
+  }
+}
+
+/* ============================================================ //
+// @ table02
+// ============================================================ */
+
+.table02 {
+  width: 100%;
+  th, td {
+    padding: 12px 17px;
+    border-top: $border-color-base 1px solid;
+    border-bottom: $border-color-base 1px solid;
+  }
+
+  th {
+    text-align: left;
+    font-family: $font-family-notosans;
+    font-weight: bold;
+  }
+}
+
+/* ============================================================ //
+// @ table03
+// ============================================================ */
+
+.table03 {
+  width: 100%;
+  @include max-media($screen-sm){
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  tbody,thead,tr,th,td{
+    @include max-media($screen-sm){
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  th, td {
+    padding: 11px 17px;
+    border: $border-color-base 1px solid;
+  }
+
+  th {
+    width: 20%;
+    min-width: 192px;
+    background: $brand-main-lighter;
+    text-align: left;
+    font-family: $font-family-notosans;
+    font-weight: bold;
+    vertical-align: top;
+  }
+}
 
 // 横スクロールテーブル
 // ------------------------------------------------------------
@@ -15,15 +88,15 @@ $img_path: "./../../assets/img/";
 //</div>
 
 
-.table-scroll-container{
+.table-scroll-container {
   position: relative;
-  margin: 50px 0;
-  &:before{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    margin-left: -100px;
-    transform : translate(-50%,-100%);
+
+  &:before {
+    //position: absolute;
+    //top: 0%;
+    //left: 50%;
+    //margin-left: -100px;
+    //transform: translate(-50%, -100%);
     //
     line-height: 1;
     font-family: 'Material Icons';
@@ -32,23 +105,35 @@ $img_path: "./../../assets/img/";
     font-size: 18px;
     vertical-align: middle;
   }
-  &:after{
+
+  &:after {
     position: absolute;
     top: 0;
     left: 50%;
-    transform : translate(-50%,-100%);
+    transform: translate(-50%, -100%);
     //
     display: block;
     content: "この表は横にスクロールができます";
     font-size: 11px;
     color: $text-color-sub;
   }
-  &__inner{
+
+  &__inner {
     overflow: auto;
     white-space: nowrap;
     position: relative;
   }
-  table:first-child{
+
+  table:first-child {
     margin-top: 3px;
   }
+}
+
+//
+// ------------------------------------------------------------
+
+[class^=column-table] .entry-container{
+  overflow-x: auto;
+  margin-bottom: 30px;
+  width: auto;
 }

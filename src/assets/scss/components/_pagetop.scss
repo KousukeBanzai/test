@@ -3,3 +3,46 @@
 // ============================================================ */
 
 $img_path: "./../../assets/img/";
+
+//.pagetop{
+//  z-index: $zindex-pagetop;
+//  position: fixed;
+//  bottom: 15px;
+//  right: 15px;
+//  //
+//  width: 55px;
+//  height: 55px;
+//  margin-bottom: 0;
+//  border-radius: 55px;
+//  background: $brand-accent01;
+//  transition: all $hover-transition ease;
+//  text-align: center;
+//  &:hover{
+//    background: $brand-accent01-darker;
+//    cursor: pointer;
+//  }
+//  &:selection{
+//    background: transparent;
+//  }
+//  &.is-hidden{
+//    display: none;
+//  }
+//  @include max-media($screen-md){
+//    display: none;
+//  }
+//}
+//
+//.pagetop-icon{
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  transform : translate(-50%,-50%);
+//  //
+//  text-align: center;
+//  line-height: 1.5;
+//  font-size: 24px;
+//  color: #fff;
+//  &:selection{
+//    background: transparent;
+//  }
+//}
