@@ -1,0 +1,71 @@
+/* ============================================================ //
+// @ visible style
+// ============================================================ */
+
+//<h3 class="heading03">表示制御汎用クラス</h3>
+//<table class="table02">
+//<tbody>
+//<tr>
+//<th>hidden--md </th>
+//<td>タブレットサイズ以下の時に非表示にする</td>
+//</tr>
+//<tr>
+//<th>hidden--sm</th>
+//<td>スマートフォンサイズ以下の時に非表示にする</td>
+//</tr>
+//<tr>
+//<th>visible--md</th>
+//<td>タブレットサイズ以下の時に表示させる</td>
+//</tr>
+//<tr>
+//<th>visible--sm</th>
+//<td>スマートフォンサイズ以下の時に表示させる</td>
+//</tr>
+//</tbody>
+//</table>
+
+.hidden--md {
+   @include max-media($screen-md) {
+     display: none !important;
+   }
+ }
+
+.hidden--sm {
+  @include max-media($screen-6ls) {
+    display: none !important;
+  }
+}
+
+.visible--md {
+  display: none !important;
+  @include max-media($screen-md) {
+    display: block !important;
+  }
+}
+
+.visible--sm {
+  display: none !important;
+  @include max-media($screen-sm) {
+    display: block !important;
+  }
+}
+
+// lang en
+// -------------------
+
+.visible--en{
+  display: none;
+  &:lang(en){
+    display: block!important;
+  }
+}
+
+.visible--en--sm {
+  display: none !important;
+  @include max-media($screen-sm) {
+    &:lang(en){
+      display: block !important;
+    }
+  }
+}
+

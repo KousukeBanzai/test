@@ -1,0 +1,25 @@
+/* ============================================================ //
+// @ ie
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+.ie-prompt{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow:0px 0px 3px 3px $gray-light;
+  background: $brand-danger;
+  text-align: center;
+  color: #fff;
+  padding: .5em;
+  p{
+    margin: 0;
+  }
+  a{
+    color: #fff;
+    font-size: .8em;
+  }
+}

@@ -1,0 +1,70 @@
+/* ============================================================ //
+// @ display
+// ============================================================ */
+
+//<table class="table02">
+//<tbody>
+//<tr>
+//<th>d-block</th>
+//<td>displayをブロック要素に</td>
+//</tr>
+//<tr>
+//<th>d-block--sm</th>
+//<td>スマートフォン時のみdisplayをブロック要素に</td>
+//</tr>
+//<tr>
+//<th>d-inline-block</th>
+//<td>displayをインラインブロック要素に</td>
+//</tr>
+//<tr>
+//<th>d-table</th>
+//<td>displayをテーブル要素に</td>
+//</tr>
+//<tr>
+//<th>d-flex</th>
+//<td>displayをフレックス要素に</td>
+//</tr>
+//<tr>
+//<th>d-inline</th>
+//<td>displayをインライン要素に</td>
+//</tr>
+//</tbody>
+//</table>
+
+.d-inline-block{
+  display: inline-block!important;
+}
+
+.d-block{
+  display: block!important;
+}
+
+.d-block--sm {
+  @include max-media($screen-sm) {
+    display: block !important;
+  }
+}
+
+.d-table {
+  display: table !important;
+}
+
+.d-flex {
+  display: flex !important;
+  -js-display: flex !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+
+// @ 言語変更時のdispleyスタイル
+// ------------------------------------------------------------ //
+
+.visible--en {
+  display: none;
+  &:lang(en) {
+    display: block;
+  }
+}

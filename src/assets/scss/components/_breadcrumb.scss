@@ -1,0 +1,84 @@
+/* ============================================================ //
+// @ breadcrumb
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+/*doc
+---
+title: breadcrumb
+name: breadcrumb
+category: breadcrumb
+---
+
+
+```block
+
+<div class="breadcrumb">
+  <ul>
+    <li><a href="#"><span class="breadcrumb-icon--home">HOME</span></a></li>
+    <span class="breadcrumb-icon--arrow"></span>
+    <li><a href="#"><span>News</span></a></li>
+    <span class="breadcrumb-icon--arrow"></span>
+    <li><span>CurrentPageTitle</span></li>
+  </ul>
+</div>
+
+```
+
+*/
+
+//.breadcrumb {
+//  max-width: 100%;
+//  width: 100%;
+//  @include max-media($screen-md){
+//    display: none;
+//  }
+//
+//  &__inner{
+//    width: 100%;
+//    max-width: 100%;
+//    padding: 0 $container-padding-lg;
+//    @include max-media($screen-slg){
+//      padding: 0 $container-padding-slg;
+//    }
+//  }
+//
+//  ul {
+//    margin: 0 auto;
+//    width: 100%;
+//    max-width: 100%;
+//    padding: 16px 0;
+//    font-size: 12px;
+//    text-align: left;
+//  }
+//
+//  ul li {
+//    display: inline-block;
+//    color: $text-color;
+//  }
+//
+//  a {
+//    display: inline-block;
+//    text-decoration: none;
+//    color: $text-color;
+//    @include link-hover();
+//
+//    &:hover {
+//      color: $brand-accent01;
+//    }
+//  }
+//}
+//
+//.breadcrumb-icon--arrow {
+//
+//  &:before {
+//    padding: 0 5px;
+//    position: relative;
+//    top: 2px;
+//    font-family: 'Material Icons';
+//    content: "\e5cc";
+//    color: $brand-accent01;
+//  }
+//
+//}

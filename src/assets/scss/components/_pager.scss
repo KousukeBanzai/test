@@ -1,0 +1,100 @@
+/* ============================================================ //
+// @ pager
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+// use：Ambrosite Next/Previous Post Link Plus
+
+//  <div class="pager">
+//  <?php
+//  previous_post_link_plus( array(
+//  'format' => '%link',
+//  'link' => '<span class="meta-nav"></span> %title',
+//  'in_same_tax' => true
+//  ));
+//  next_post_link_plus( array(
+//  'format' => '%link',
+//  'link' => '<span class="meta-nav"></span> %title',
+//  'in_same_tax' => true
+//  ));
+//  ?>
+//  </div>
+
+//.pager-container{
+//  width: 100%;
+//  max-width: 100%;
+//  margin: 0 auto;
+//
+//}
+//
+//.pager {
+//  display: flex;
+//  flex-flow: row wrap;
+//  justify-content: center;
+//  align-items: center;
+//  //
+//  position: relative;
+//  @include clearfix();
+//  list-style: none;
+//  margin: 0 -7px 0 -7px;
+//  padding: 0;
+//}
+//
+//.pager-item{
+//  width: 44px;
+//  height: 44px;
+//  border-radius: 5px;
+//  border: solid 1px #cccccc;
+//  margin: 0 7px;
+//  span,
+//  a{
+//    display: flex;
+//    flex-flow: row wrap;
+//    justify-content: center;
+//    align-items: center;
+//    //
+//    width: 100%;
+//    max-width: 100%;
+//    height: 100%;
+//    //
+//    left: 1.5em;
+//    font-size: 14px;
+//    text-decoration: none;
+//    color: $text-color;
+//  }
+//  a{
+//    transition: all $hover-transition ease;
+//    &:hover{
+//      background: $brand-main;
+//      color: #fff;
+//      i{
+//        color: #fff;
+//      }
+//    }
+//  }
+//  &.cur{
+//    span
+//    ,a{
+//      background: $brand-main;
+//      color: #fff;
+//      border: solid 1px $brand-main;
+//    }
+//  }
+//
+//}
+//
+//.pager-separate{
+//  display: flex;
+//  flex-flow: row wrap;
+//  justify-content: space-between;
+//  align-items: center;
+//  line-height: 1.2;
+//  span{
+//    margin: -7px 7px 0;
+//  }
+//}
+//
+//.pager-item__icon{
+//  color: $brand-main;
+//}

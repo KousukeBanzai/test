@@ -1,0 +1,255 @@
+// ============================================================ //
+// @ footer
+// ============================================================ //
+
+$img_path: "./../../assets/img/";
+
+.footer{
+  position: relative;
+  z-index: $zindex-footer;
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+}
+
+.footer__inner{
+  width: 1280px;
+  max-width: 1280px;
+  padding: 0 90px;
+  margin: 0 auto;
+  @include max-media($screen-slg){
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  @include max-media($screen-md){
+    padding: 0
+  }
+}
+
+
+// フッターヘッド
+// ------------------------------------------------------------
+
+.footer-head{
+  height: 128px;
+  background-image: url("#{$img_path}common/footer-head-bg.png");
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  //
+  margin-bottom: 50px;
+
+  @include max-media($screen-slg){
+    background-size: 100%;
+  }
+  @include max-media($screen-6ls){
+    background-size: 135%;
+  }
+  @include max-media($screen-sm){
+    height: 168px;
+    background-size: 300%;
+  }
+
+  &__title{
+    text-align: center;
+    margin: 0 auto;
+    //
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: $font-family-notosans;
+    color: $brand-main;
+  }
+}
+
+// フッターナビゲーション
+// ------------------------------------------------------------
+
+.footer-nav-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  //
+  margin-bottom: 45px;
+  @include max-media($screen-md){
+    display: none;
+  }
+}
+
+$f_container_size : 1100px;
+$f_gutter : 28px;
+$f_col : 12;
+$f_gutter_sum : $f_gutter * 11;
+$f_col_size : ($f_container_size - $f_gutter_sum) / 12;
+
+
+.footer-nav-item{
+  width: $f_col_size * 2 + $f_gutter;
+  margin-right: $f_gutter;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.footer-nav-title{
+  margin-bottom: 26px;
+  //
+  line-height: 1.5;
+  font-family: $font-family-notosans;
+  font-size: 14px;
+  font-weight: bold;
+
+  a{
+    transition: all $hover-transition ease;
+    &:active,
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover{
+      color: $text-color;
+      text-decoration: none;
+    }
+    &:hover{
+      color: $brand-accent01;
+    }
+  }
+
+}
+
+.footer-nav-list-body{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.footer-nav-list-item{
+  margin-bottom: 6px;
+  a{
+    transition: all $hover-transition ease;
+    &:active,
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover{
+      color: $text-color;
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// フッターインフォ
+// ------------------------------------------------------------
+
+.footer-info{
+  position: relative;
+  margin-bottom: 35px;
+  @include max-media($screen-sm){
+    margin-bottom: 25px;
+  }
+}
+
+.footer-info-title{
+  margin-bottom: 8px;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $font-family-notosans;
+}
+
+.footer-info-text{
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-info-nav{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  &__facebook{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    @include link-hover();
+  }
+}
+
+.footer-info-nav-item{
+  text-align: center;
+  &--icon{
+    margin-bottom: 15px;
+    @include max-media($screen-md){
+      display: none;
+    }
+  }
+  a{
+    display: inline-block;
+    transition: all $hover-transition ease;
+    &:active,
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover{
+      color: $text-color;
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+// フッターコピー
+// ------------------------------------------------------------
+
+.footer-copy{
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+  color: $brand-main;
+  p{
+    margin-bottom: 0;
+  }
+  &__icon{
+    font-size: 10px;
+  }
+}
+
+// フッター固定バナー
+// ------------------------------------------------------------
+
+.footer-fixed-banner{
+  position: fixed;
+  z-index: $zindex-footer-fixed-banner;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  //
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  @include max-media($screen-sm){
+    display: block;
+  }
+  a{
+    display: block;
+    @include link-hover();
+  }
+  img{
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+}
