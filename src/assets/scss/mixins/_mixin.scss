@@ -24,39 +24,6 @@
   text-overflow: ellipsis;
 }
 
-// @ box-shadow
-// ------------------------------------------------------------
-
-@mixin box-shadow( $h: 0px , $v: 2px , $b: 3px , $s: 1px , $c: #bbb ) {
-  -webkit-box-shadow: $h $v $b $s $c;
-  -moz-box-shadow: $h $v $b $s $c;
-  box-shadow: $h $v $b $s $c;
-}
-
-// @ positon
-// ------------------------------------------------------------
-
-@mixin xPos($x) {
-  -webkit-transform: translateX($x);
-  -moz-transform: translateX($x);
-  -ms-transform: translateX($x);
-  transform: translateX($x);
-}
-
-@mixin yPos($y) {
-  -webkit-transform: translateY($y);
-  -moz-transform: translateY($y);
-  -ms-transform: translateY($y);
-  transform: translateY($y);
-}
-
-// @ tranceform
-// ------------------------------------------------------------
-
-@mixin rotate($deg) {
-  transform: rotate(#{$deg}deg);
-}
-
 // @ transition
 // ------------------------------------------------------------
 
@@ -64,28 +31,6 @@
   transition: all $val ease;
 }
 
-// @ width heght
-// ------------------------------------------------------------
-
-@mixin perwidth( $parentPxWidth, $pxWidth ) {
-  width: (( $pxWidth / $parentPxWidth ) * 10000% ) / 100;
-}
-
-@mixin wdiv( $width ) {
-  width: ($width / 2);
-}
-
-@mixin hdiv( $heght ) {
-  height: ($heght / 2);
-}
-
-// @ font size
-// ------------------------------------------------------------
-
-@mixin fzem($size: 24, $base:$font-size-base) {
-  $fzPcEm: $size / $base;
-  font-size: $fzPcEm + em;
-}
 
 // @ link
 // ------------------------------------------------------------
@@ -154,11 +99,4 @@
   @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
     @content;
   }
-}
-
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  //padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  //line-height: $line-height;
-  //border-radius: $border-radius;
 }

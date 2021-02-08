@@ -38,7 +38,6 @@ function scssCompile(distDir) {
 
 gulp.task('scss', function(done){
   scssCompile(config.path.dist + config.path.css);
-  scssCompile(config.path.dist + config.path.styleguile_dist + config.path.css);
   done();
 });
 

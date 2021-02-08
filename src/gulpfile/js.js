@@ -41,6 +41,5 @@ function jsCompile(distDir) {
 
 gulp.task('js',function(done){
   jsCompile(config.path.dist + config.path.js);
-  jsCompile(config.path.dist + config.path.styleguile_dist + config.path.js);
   done();
 });

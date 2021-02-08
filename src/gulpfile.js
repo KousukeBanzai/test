@@ -24,13 +24,12 @@ gulp.task('watch', function(){
   gulp.watch(config.path.source + config.path.js + '**/*.js').on('change', gulp.series('js','bs-reload'));
   gulp.watch(config.path.source + config.path.img + '**/*.jpg').on('change', gulp.series('imagemin','bs-reload'));
   gulp.watch(config.path.source + config.path.img + '**/*.png').on('change', gulp.series('imagemin','bs-reload'));
-  gulp.watch(config.path.source + config.path.php + '**/*.php').on('change', gulp.series('php','bs-reload'));
   gulp.watch(config.path.source + config.path.js + 'lib/**/*').on('change', gulp.series('copy.assets','bs-reload'));
   gulp.watch(config.path.source + config.path.svg + '**/*').on('change', gulp.series('copy.assets','bs-reload'));
   gulp.watch(config.path.source + config.path.file + '**/*').on('change', gulp.series('copy.assets','bs-reload'));
 });
 
-gulp.task('run',gulp.series(
+gulp.task('serve',gulp.series(
   'bs',
   gulp.parallel('watch')
 ));
@@ -41,5 +40,5 @@ gulp.task('run',gulp.series(
 
 gulp.task('build',gulp.series(
   'clean',
-  gulp.parallel('scss', 'hologram','js','copy.assets', 'imagemin')
+  gulp.parallel('scss','js','copy.assets', 'imagemin')
 ));
