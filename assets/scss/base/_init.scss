@@ -1,0 +1,39 @@
+@use "../variables" as var;
+@use "../mixins" as mix;
+@use "../functions" as function;
+
+// メディアクエリが正常に出力されるようここで定義
+
+*{
+ box-sizing: border-box;
+ @include mix.max-media(var.$screen-xlg){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-lg){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-mlg){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-slg){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-md){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-6ls){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-5ls){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-sm){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-msm){
+   box-sizing: border-box;
+ }
+ @include mix.max-media(var.$screen-xs){
+   box-sizing: border-box;
+ }
+}
