@@ -141,6 +141,7 @@ HTML側へのクラス付与は「見た目」「構造」意識する
 
 ex)
 
+
 ``` var target_trigger = "hoge" ```
 
 
@@ -156,7 +157,6 @@ var str = 'hoge' //str
 var bool = true //bool
 
 ``` 
-
 
 
 # メタ情報
