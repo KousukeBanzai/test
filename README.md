@@ -142,7 +142,9 @@ HTML側へのクラス付与は「見た目」「構造」意識する
 ex)
 
 
-``` var target_trigger = "hoge" ```
+```
+var target_trigger = "hoge"
+```
 
 
 ## 変数型
