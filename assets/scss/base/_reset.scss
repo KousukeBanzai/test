@@ -1,39 +1,3 @@
 @use "../variables" as var;
 @use "../mixins" as mix;
 @use "../functions" as function;
-
-label, legend {
-  display: block;
-  font-size: 16px;
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-fieldset, input, select, textarea {
-  margin-bottom: 0;
-}
-
-
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
-textarea,
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  box-sizing: inherit;
-  height: auto;
-  padding: 0 8px;
-  width: 100%;
-
-}
-

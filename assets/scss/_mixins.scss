@@ -1,24 +1,6 @@
 @use "./variables" as var;
 @use "./functions" as mix;
 
-
-// @ clearfix
-// ------------------------------------------------------------
-
-@mixin clearfix {
-  zoom: 1;
-  
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-  
-  &:after {
-    clear: both;
-  }
-}
-
 // @ btn-reset
 // ------------------------------------------------------------
 
@@ -44,45 +26,6 @@
   transition: all $val ease;
 }
 
-// box-shadow
-// ------------------------------------------------------------
-@mixin boxshadow(){
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-@mixin boxshadow-hover(){
-  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12%);
-}
-// @ link
-// ------------------------------------------------------------
-
-@mixin link-color($val:$link-color) {
-  color: $val;
-  &:link,
-  &:active,
-  &:hover,
-  &:visited,
-  &:focus {
-    color: $val;
-  }
-}
-
-@mixin link-hover($opacity:.7) {
-  transition: all $hover-transition ease;
-  &:hover {
-    opacity: $opacity;
-  }
-}
-
-// @ I18n 改行コードが存在する場合、テキストを改行させる処理
-// ------------------------------------------------------------
-@mixin nwrap(){
-  white-space: pre-wrap;
-  word-wrap:break-word;
-}
-
-
-
 // @ media
 // ------------------------------------------------------------
 
@@ -107,12 +50,6 @@
 //$screen-sm-max:              ($screen-md-min - 1);
 //$screen-md-max:              ($screen-lg-min - 1);
 
-@mixin print {
-  @media print {
-    @content;
-  }
-}
-
 @mixin max-media($break-point) {
   @media screen and (max-width: $break-point) {
     @content;
@@ -130,49 +67,6 @@
     @content;
   }
 }
-
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  //padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  //line-height: $line-height;
-  //border-radius: $border-radius;
-}
-
-
-// @ css reset
-// ------------------------------------------------------------
-
-@mixin btn-reset{
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  appearance: none;
-}
-
-@mixin textarea-reset{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  resize: none;
-  padding: 0;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-
-// @ v-appreset
-// ------------------------------------------------------------
-
-@mixin vapp_reset(){
-  .v-application &{
-    @content;
-
-  }
-}
-
-
 
 
 

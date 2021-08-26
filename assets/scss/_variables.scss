@@ -6,7 +6,7 @@ $container-mlg : 1200px;
 $container-pad : 50px;
 
 // ============================================================
-//  @Typography
+//  @Colors
 // ============================================================
 
 $brand-primary          :  #0082aa;
@@ -20,22 +20,16 @@ $brand-disable          :  #888888;
 // -------------------
 
 $brand-main             :  #152d5b;
+
 $brand-main-lighter     :  $brand-main;
 $brand-main-lighten     :  $brand-main;
+
 $brand-main-darker      :  #00163E;
 $brand-main-darken      :  $brand-main;
+
 $brand-gray-lighten     :  #F7F7F7;
 $brand-gray-darker      :  #616265;
 $brand-gray-darken      :  #04122c;
-
-// 機能カラー
-// -------------------
-$brand-alert            : $brand-main;
-
-//
-// -------------------
-$theme-d                : #e73b68;
-$theme-x                : #e73b68;
 
 // text color
 // -------------------
