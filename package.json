@@ -4,6 +4,13 @@
   "description": "TOKIYORI standard front-end development kit",
   "main": "",
   "scripts": {
+    "css": "run-s css:scss css:postcss",
+    "css:scss": "sass ./assets/scss/:../assets/css/ --no-source-map",
+    "css:postcss": "postcss ../assets/css/style.css -u css-mqpacker autoprefixer -o ../assets/css/style.css",
+    "watch:css": "watch 'npm run css' ./assets/scss/",
+    "watch:server": "browser-sync start --server ../ --files='../**/*.html, ../assets/**/*.css, ../assets/**/*.js' --startPath='../' ",
+    "serve": "npm-run-all -p watch:*",
+
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch",
