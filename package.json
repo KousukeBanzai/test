@@ -10,12 +10,10 @@
     "watch:css": "watch 'npm run css' ./assets/scss/",
     "watch:server": "browser-sync start --server ../ --files='../**/*.html, ../assets/**/*.css, ../assets/**/*.js' --startPath='../' ",
     "serve": "npm-run-all -p watch:*",
-
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch",
-    "sass-ver": "sass --version",
-    "start": "webpack serve --mode development"
+    "start": "watch"
   },
   "author": "KousukeBanzai",
   "license": "ISC",

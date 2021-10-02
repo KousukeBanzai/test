@@ -9,7 +9,7 @@ const $ = jquery;
 // sub.jsに定義されたJavaScriptを実行する。
 //hello();
 
-$('#test').addClass('bar sfew sss xxx ppp weww');
+$('#test').addClass('hoge');
 
 new Vue({
   el: "#app"
