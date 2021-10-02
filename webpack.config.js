@@ -2,12 +2,14 @@
 const enabledSourceMap =  process.env.NODE_ENV !== 'production';
 
 const PATH = require('path');
+const webpack = require('webpack');
 
 //BrowserSyncPlugin の読み込み
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: './assets/js/index.js',
+  entry: '.' +
+    'z/assets/js/index.js',
   output: {
     path: PATH.resolve(__dirname, '../assets/js/'),
     publicPath: PATH.resolve(__dirname, '../'),
@@ -113,7 +115,11 @@ module.exports = {
       host: 'localhost',
       port: 3000,
       server: { baseDir: '../'}
-    })
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
   ],
   devtool: "source-map",
   watchOptions: {
