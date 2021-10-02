@@ -160,6 +160,8 @@ var bool = true //bool
 
 ## リリースノート
 
+
+- 2021.10.3 ver2.0：Webpack導入
 - 2021.8.4 ver1.0：開発環境初期構築完了
 
 ## タスクリスト
@@ -170,6 +172,11 @@ var bool = true //bool
 https://hibi-update.org/javascript/npm-scripts/
 https://qiita.com/takeshisakuma/items/dbbb1c465099e6e4dd2e
 
+### Webpack
+
+- https://ics.media/entry/12140/
+- https://www.webdesignleaves.com/pr/css/sass_webpack.html
+
 ## 最終更新
 
-2021.8.1 阪西孝介
+2021.10.3 阪西孝介
