@@ -10,10 +10,10 @@
     "js:babel": "./node_modules/.bin/babel ./assets/js/ --out-dir ../assets/js/",
     "js:uglifyjs": "uglifyjs ../assets/js/index.js -o ../assets/js/index.min.js",
     "js": "npm-run-all -s js:*",
-    "start": "npm-run-all -p watch:*",
-    "watch:server": "browser-sync start --server ../ --files='../**/*.html, ../assets/**/*.css, ../assets/**/*.js' --startPath='../' ",
+    "watch:server": "browser-sync start --server ../ --files='../**/*.html, ./assets/**/*.scss, ./assets/**/*.js' --startPath='../' ",
     "watch:css": "watch 'npm run css' ./assets/scss/",
-    "watch:js": "watch 'npm run js' ./assets/js/"
+    "watch:js": "watch 'npm run js' ./assets/js/",
+    "start": "npm-run-all -p watch:*"
   },
   "author": "KousukeBanzai",
   "license": "ISC",
