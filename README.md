@@ -168,7 +168,6 @@ var bool = true //bool
 
 ## タスクリスト
 - webpack管理下では無いsrc上位かつsrc配下以外のファイル監視・ホットリード機能の実装
-- webpack複数エントリーポイントの対応・設計案検討
 
 ## 参考サイト
 https://hibi-update.org/javascript/npm-scripts/

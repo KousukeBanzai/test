@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: PATH.resolve(__dirname, '../assets/js/'),
     publicPath: PATH.resolve(__dirname, '../'),
-    filename: "bundle.js"
+    filename: "[name].js"
   },
   devServer: {
     static: PATH.resolve(__dirname, '../'),

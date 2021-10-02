@@ -1,9 +1,7 @@
-import "../scss/style.scss";
-//var Snap = require('snapsvg');
+// import "../scss/style.scss";
+require('./lib/snap.svg-min.js');
 
-$(function(){
-  $('#app').addClass('.is-hot');
-});
+//
 
 
 //
