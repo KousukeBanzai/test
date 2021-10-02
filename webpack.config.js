@@ -8,8 +8,7 @@ const webpack = require('webpack');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: '.' +
-    'z/assets/js/index.js',
+  entry: './assets/js/index.js',
   output: {
     path: PATH.resolve(__dirname, '../assets/js/'),
     publicPath: PATH.resolve(__dirname, '../'),
@@ -119,7 +118,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-    }),
+    })
   ],
   devtool: "source-map",
   watchOptions: {
