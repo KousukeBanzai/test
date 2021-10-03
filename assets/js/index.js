@@ -1,4 +1,3 @@
-import jQuery from 'jquery';
 import "../scss/style.scss";
 import '/node_modules/hiraku/js/jquery-hiraku.js';
 import '/node_modules/hiraku/scss/hiraku.scss';
