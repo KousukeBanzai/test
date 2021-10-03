@@ -8,13 +8,5 @@
 @use './pages';
 @use './utility';
 
-body {
-  background: #000;
-}
-svg,path {
-  position: fixed;
-  left: calc(50% - 125px);
-  top: calc(50% - 125px);
-  width: 250px;
-  height: 250px;
-}
+
+
