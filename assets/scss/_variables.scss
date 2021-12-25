@@ -1,0 +1,126 @@
+// ============================================================
+//  @container
+// ============================================================
+
+$container-mlg : 1200px;
+$container-pad : 50px;
+
+// ============================================================
+//  @Colors
+// ============================================================
+
+$brand-primary          :  #0082aa;
+$brand-success          :  #137E00;
+$brand-info             :  #4A90B9;
+$brand-warning          :  #FF7F00;
+$brand-error            :  #d9534f;
+$brand-disable          :  #888888;
+
+// brand color
+// -------------------
+
+$brand-main             :  #152d5b;
+
+$brand-main-lighter     :  $brand-main;
+$brand-main-lighten     :  $brand-main;
+
+$brand-main-darker      :  #00163E;
+$brand-main-darken      :  $brand-main;
+
+$brand-gray-lighten     :  #F7F7F7;
+$brand-gray-darker      :  #616265;
+$brand-gray-darken      :  #04122c;
+
+// text color
+// -------------------
+$text-color             : #3b3b3b;
+$text-color-sub         : #888888;
+$text-color-placeholder :  #BCBCBC;
+$text-color-disable     :  $brand-disable;
+$text-color-white       :  #fff;
+$border-color-base      :  #DEDEDE;
+
+// link color
+// -------------------
+$link-color             :  #0079D1;
+$link-visited-color     :  $link-color;
+$link-active-color      :  $link-color;
+$link-hover-color       :  $link-color;
+
+// ============================================================
+// @ タイポグラフィ設定
+// ============================================================
+
+// ベースフォント設定
+// -------------------
+$font-family-base        :  "Helvetica Neue", "Roboto", Arial, "Hiragino Kaku Gothic ProN",  "Hiragino Sans", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+$font-size-base          :  15px;
+$font-size-heading       :  $font-size-base;
+$headings-color          :  #333;
+$line-height-base        :  1.7;
+$line-height-heading     :  1.4;
+
+// ============================================================ //
+// @ transition & hover opacity 設定
+// ============================================================ //
+
+$hover-transition        :  .3s;
+$hover-opacity           :  .7;
+
+
+// ============================================================
+// @ 全体構造定義
+// ============================================================
+
+// ============================================================ //
+// @ Z-index定義
+// ============================================================ //
+
+$zindex-header : 5000;
+
+// ============================================================ //
+// @ メディアクエリ設定
+// ============================================================ //
+
+// Extra small screen / phoneSE
+$screen-xs               :  320px;
+$screen-xs-min           :  $screen-xs;
+
+// Small Mid Small screen / Iphone
+$screen-sm               :  414px;
+$screen-msm               :  375px;
+$screen-msm-min           :  $screen-sm;
+
+// Small screen / Iphone Plus
+
+$screen-sm-min           :  $screen-sm;
+
+// iphone5 land
+$screen-5ls              :  568px;
+
+// iphone6 land
+$screen-6ls              :  667px;
+
+// Medium screen
+$screen-md               :  768px;
+$screen-md               :  768px;
+$screen-md-min           :  $screen-sm + 1;
+$screen-desktop          :  $screen-md-min;
+
+// Small large screen
+$screen-slg               :  940px;
+$screen-slg-min           :  $screen-md + 1;
+
+// Mid large screen
+$screen-mlg               :  1024px;
+$screen-mlg-min           :  $screen-slg + 1;
+
+// Large screen
+$screen-lg               :   1140px;
+$screen-lg-min           :   $screen-md + 1;
+
+// Xlarge screen
+$screen-xlg               :   1980px;
+$screen-xlg-min           :   $screen-lg + 1;
+
+

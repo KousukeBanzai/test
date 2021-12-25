@@ -1,0 +1,72 @@
+@use "./variables" as var;
+@use "./functions" as mix;
+
+// @ btn-reset
+// ------------------------------------------------------------
+
+@mixin btn-reset{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+// @ text-overflow
+// ------------------------------------------------------------
+
+@mixin text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin transition-delay($val:$hover-transition) {
+  transition: all $val ease;
+}
+
+// @ media
+// ------------------------------------------------------------
+
+//$screen-xs:                  320px;
+//$screen-xs-min:              $screen-xs;
+//$screen-phone:               $screen-xs-min;
+//$screen-sm:                  414px;
+//$screen-sm-min:              $screen-sm;
+//$screen-tablet:              $screen-sm-min;
+//
+//$screen-md:                  768px;
+//$screen-md-min:              $screen-md;
+//$screen-desktop:             $screen-md-min;
+//
+//$screen-lg:                  1200px;
+//$screen-lg-min:              $screen-lg;
+//
+//$screen-lg-desktop:          $screen-lg-min;
+//
+//
+//$screen-xs-max:              ($screen-sm-min - 1);
+//$screen-sm-max:              ($screen-md-min - 1);
+//$screen-md-max:              ($screen-lg-min - 1);
+
+@mixin max-media($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-media($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin media($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+
+
