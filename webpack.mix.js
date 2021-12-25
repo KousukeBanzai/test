@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+require('laravel-mix-ejs');
 
 const srcDir = './';
 const assetsDir = 'assets';
@@ -33,8 +34,22 @@ mix.sass(srcDir + assetsDir + '/scss/app.scss',
     // },
   });
 
-// Browsersync
 
+// Laravel Mix extension to compile EJS templates.
+// mix.ejs(
+//   './views',
+//   '../',
+//   {
+//     foo: ''
+//   },
+//   {
+//     base: './views',
+//     ext: '.html',
+//     partials: './views/partials'
+//   }
+// )
+
+// Browsersync
 mix.browserSync({
   files: [
     "../*",
