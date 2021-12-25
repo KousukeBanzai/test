@@ -5,3 +5,4 @@ new Vue({
   el: '#app',
   components: { Alert }
 });
+

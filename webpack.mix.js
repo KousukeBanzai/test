@@ -4,10 +4,24 @@ const srcDir = './';
 const assetsDir = 'assets';
 const distDir = '../';
 
+
+// Autoloading
+mix.autoload({
+  jquery: ['$', 'window.jQuery']
+});
+
+// JavaScript Bundling
+// + Vue Support
 mix.js(srcDir + assetsDir + '/js/app.js',
   './' + assetsDir + '/js/').vue()
    .setPublicPath(distDir);
 
+mix.extract([
+  'vue',
+  'jquery'
+]);
+
+// Sass Preprocessing
 mix.sass(srcDir + assetsDir + '/scss/app.scss',
   './' + assetsDir + '/css/',
   {
@@ -19,11 +33,19 @@ mix.sass(srcDir + assetsDir + '/scss/app.scss',
     // },
   });
 
+// Browsersync
+
 mix.browserSync({
-  files: ["./*", "./**/*", "./**/**/*", "./**/**/**/*"],
-  //server: '../../../../',
-  browser: "google chrome",
-  proxy: {
-    target: "http://localhost/",
+  files: [
+    "../*",
+    "../**/*",
+    "./*",
+    "./**/*",
+    "./**/**/*",
+    "./**/**/**/*"],
+  server: {
+    baseDir: "../",
+    directory: true
   },
+  port: 8080
 });
