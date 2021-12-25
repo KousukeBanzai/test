@@ -1,9 +1,10 @@
-let mix = require('laravel-mix');
-require('laravel-mix-ejs');
-
+const mix = require('laravel-mix');
 const srcDir = './';
 const assetsDir = 'assets';
 const distDir = '../';
+
+require('laravel-mix-ejs');
+require('laravel-mix-purgecss');
 
 
 // Autoloading
@@ -32,7 +33,12 @@ mix.sass(srcDir + assetsDir + '/scss/app.scss',
     // sassOptions: {
     //   outputStyle: "compressed",
     // },
-  });
+  })
+  .purgeCss(
+    {
+      //enabled: true,
+    }
+  );
 
 
 // Laravel Mix extension to compile EJS templates.
