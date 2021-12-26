@@ -17,26 +17,28 @@ const defaultConfig = {
   safelist: { standard: [/-active$/, /-enter$/, /-leave-to$/, /show$/] },
 }
 
-
+mix.setPublicPath(distDir);
+mix.webpackConfig({ devtool: "source-map" }); // 追加
 
 // js
 // ------------------------------------------------------------
+
+// JavaScript Bundling
+// + Vue Support
+glob.sync(srcDir + assetsDir + '/js/**/*.js').map(function(file){
+  mix.js(file, './' + assetsDir + '/js/').vue()
+});
 
 // Autoloading
 mix.autoload({
   jquery: ['$', 'window.jQuery']
 });
 
-// JavaScript Bundling
-// + Vue Support
-mix.js(srcDir + assetsDir + '/js/app.js',
-  './' + assetsDir + '/js/').vue()
-   .setPublicPath(distDir);
-
-mix.extract([
+// Vender
+mix
+  .extract([
   'vue',
-  'jquery'
-]);
+  'jquery']);
 
 // Scss
 // ------------------------------------------------------------
@@ -87,7 +89,8 @@ mix
         }
       },
     }
-  );
+  )
+  .sourceMaps();
 
 // Ejs
 // ------------------------------------------------------------
@@ -110,7 +113,8 @@ mix
 // Browsersync
 // ------------------------------------------------------------
 
-mix.browserSync({
+mix
+  .browserSync({
   files: [
     "../*",
     "../**/*",
