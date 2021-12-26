@@ -2,7 +2,7 @@
 @use "../mixins" as mix;
 @use "../functions" as function;
 
-$spaceClass: false !default;
+$spaceClass: true !default;
 $marginTop: true !default;
 $marginRight: true !default;
 $marginBottom: true !default;

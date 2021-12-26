@@ -1,9 +1,12 @@
+require('laravel-mix-ejs');
+require('laravel-mix-purgecss');
+
 const mix = require('laravel-mix');
+const path= require('path');
+const glob = require('glob');
 const srcDir = './';
 const assetsDir = 'assets';
 const distDir = '../';
-const path= require('path');
-
 const defaultConfig = {
   content: [
     "./**/*.html",
@@ -14,8 +17,7 @@ const defaultConfig = {
   safelist: { standard: [/-active$/, /-enter$/, /-leave-to$/, /show$/] },
 }
 
-require('laravel-mix-ejs');
-require('laravel-mix-purgecss');
+
 
 // js
 // ------------------------------------------------------------
@@ -40,20 +42,38 @@ mix.extract([
 // ------------------------------------------------------------
 
 // Sass Preprocessing
-mix.sass(srcDir + assetsDir + '/scss/app.scss',
+mix
+  .sass(srcDir + assetsDir + '/scss/app.scss',
   './' + assetsDir + '/css/',
   {
-    // Prefer `dart-sass`
-    implementation: require("sass"),
+    implementation: require("sass"), // Prefer `dart-sass`
     sourceMap: true,
     // sassOptions: {
     //   outputStyle: "compressed",
     // },
   })
+  .options({
+    processCssUrls: false, // false でurl()の変換をさせない
+    autoprefixer: {
+      options: {
+        grid: true, // grid: trueでIE11でのgrid使用できるように
+      }
+    },
+    // 下記を追加
+    postCss: [
+      require('css-mqpacker')(),
+      require('css-declaration-sorter')({
+        order: 'alphabetical' // smacss, concentric-css
+      }),
+      require('postcss-custom-properties')({
+        preserve: false
+      })
+    ]
+  })
   // purgeCss：未使用CSSを削除
   .purgeCss(
     {
-      // enabled: true,
+      //\enabled: true,
       extend: {
         content: [
           path.join(__dirname, '../**/*.html'),
