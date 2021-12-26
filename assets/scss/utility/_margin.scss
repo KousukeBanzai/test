@@ -2,92 +2,124 @@
 @use "../mixins" as mix;
 @use "../functions" as function;
 
-$spaceClass: true !default;
-
+$spaceClass: false !default;
 $marginTop: true !default;
 $marginRight: true !default;
 $marginBottom: true !default;
-$marginLeft: true !default;
-$marginX: true !default;
-$marginY: true !default;
-$marginXY: true !default;
-
-$spacePadding: true !default;
-$paddingTop: true !default;
-$paddingRight: true !default;
-$paddingBottom: true !default;
-$paddingLeft: true !default;
-$paddingX: true !default;
-$paddingY: true !default;
-$paddingXY: true !default;
-
-
 $endValue: 300 !default;
 
 @if $spaceClass {
-
   @for $i from 0 through $endValue {
-
     @if $marginTop {
-
       .mt_#{$i} {
-        margin-top: 5px * $i;
+        margin-top: $i;
       }
-      @include mix.max-media(var.$screen-xlg){
+      @include mix.max-media(var.$screen-xlg) {
         .mt_#{$i}_xlg {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-lg){
+      @include mix.max-media(var.$screen-lg) {
         .mt_#{$i}_lg {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-mlg){
+      @include mix.max-media(var.$screen-mlg) {
         .mt_#{$i}_mlg {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-slg){
+      @include mix.max-media(var.$screen-slg) {
         .mt_#{$i}_xlg {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-md){
+      @include mix.max-media(var.$screen-md) {
         .mt_#{$i}_md {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-6ls){
+      @include mix.max-media(var.$screen-6ls) {
         .mt_#{$i}_6ls {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-
-      @include mix.max-media(var.$screen-5ls){
+      @include mix.max-media(var.$screen-5ls) {
         .mt_#{$i}_5ls {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-sm){
+      @include mix.max-media(var.$screen-sm) {
         .mt_#{$i}_sm {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-msm){
+      @include mix.max-media(var.$screen-msm) {
         .mt_#{$i}_msm {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-      @include mix.max-media(var.$screen-xs){
+      @include mix.max-media(var.$screen-xs) {
         .mt_#{$i}_xs {
-          margin-top: 5px * $i;
+          margin-top: $i;
         }
       }
-
-
-
-
+    }
+    @if $marginBottom {
+      .mb_#{$i} {
+        margin-top: $i;
+      }
+      @include mix.max-media(var.$screen-xlg) {
+        .mb_#{$i}_xlg {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-lg) {
+        .mb_#{$i}_lg {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-mlg) {
+        .mb_#{$i}_mlg {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-slg) {
+        .mb_#{$i}_xlg {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-md) {
+        .mb_#{$i}_md {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-6ls) {
+        .mb_#{$i}_6ls {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-5ls) {
+        .mb_#{$i}_5ls {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-sm) {
+        .mb_#{$i}_sm {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-msm) {
+        .mb_#{$i}_msm {
+          margin-bottom: $i;
+        }
+      }
+      @include mix.max-media(var.$screen-xs) {
+        .mb_#{$i}_xs {
+          margin-bottom: $i;
+        }
+      }
     }
   }
 }
+
