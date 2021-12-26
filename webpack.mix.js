@@ -2,10 +2,23 @@ const mix = require('laravel-mix');
 const srcDir = './';
 const assetsDir = 'assets';
 const distDir = '../';
+const path= require('path');
+
+const defaultConfig = {
+  content: [
+    "./**/*.html",
+    "./assets/**/*.js",
+    "./assets/**/*.vue",
+  ],
+  defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
+  safelist: { standard: [/-active$/, /-enter$/, /-leave-to$/, /show$/] },
+}
 
 require('laravel-mix-ejs');
 require('laravel-mix-purgecss');
 
+// js
+// ------------------------------------------------------------
 
 // Autoloading
 mix.autoload({
@@ -23,6 +36,9 @@ mix.extract([
   'jquery'
 ]);
 
+// Scss
+// ------------------------------------------------------------
+
 // Sass Preprocessing
 mix.sass(srcDir + assetsDir + '/scss/app.scss',
   './' + assetsDir + '/css/',
@@ -34,11 +50,27 @@ mix.sass(srcDir + assetsDir + '/scss/app.scss',
     //   outputStyle: "compressed",
     // },
   })
+  // purgeCss：未使用CSSを削除
   .purgeCss(
     {
-      //enabled: true,
+      // enabled: true,
+      extend: {
+        content: [
+          path.join(__dirname, '../**/*.html'),
+          path.join(__dirname, '../**/*.php')
+        ],
+        //https://purgecss.com/safelisting.html#specific-selectors
+        safelist:{
+          standard: [/^is-/],
+          deep: [],
+          greedy: []
+        }
+      },
     }
   );
+
+// Ejs
+// ------------------------------------------------------------
 
 
 // Laravel Mix extension to compile EJS templates.
@@ -56,6 +88,8 @@ mix.sass(srcDir + assetsDir + '/scss/app.scss',
 // )
 
 // Browsersync
+// ------------------------------------------------------------
+
 mix.browserSync({
   files: [
     "../*",
