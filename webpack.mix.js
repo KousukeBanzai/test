@@ -75,7 +75,7 @@ mix
   // purgeCss：未使用CSSを削除
   .purgeCss(
     {
-      //\enabled: true,
+      // enabled: true,
       extend: {
         content: [
           path.join(__dirname, '../**/*.html'),

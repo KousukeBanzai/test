@@ -1,3 +1,9 @@
 @use "../variables" as var;
 @use "../mixins" as mix;
 @use "../functions" as function;
+
+@use "./header";
+@use "./container";
+@use "./loading";
+@use "./mv";
+

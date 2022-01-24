@@ -1,3 +1,8 @@
 @use "../variables" as var;
 @use "../mixins" as mix;
 @use "../functions" as function;
+
+p{
+  font-size: 16px;
+  line-height: 2;
+}

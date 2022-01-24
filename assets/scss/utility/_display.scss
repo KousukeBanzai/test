@@ -1,0 +1,31 @@
+@use "../variables" as var;
+@use "../mixins" as mix;
+@use "../functions" as function;
+
+@each $media, $blakepoint in var.$blakepoints {
+  .hidden--#{$media}{
+    @media screen and (max-width: #{$blakepoint}) {
+      display: none;
+    }
+  }
+}
+
+@each $media, $blakepoint in var.$blakepoints {
+  .visible--#{$media}{
+    @media screen and (max-width: #{$blakepoint}) {
+      display: block;
+    }
+  }
+}
+
+.dis-block{
+  display: block;
+}
+
+.dis-inline_block{
+  display: inline-block;
+}
+
+.dis-flex{
+  display: flex;
+}

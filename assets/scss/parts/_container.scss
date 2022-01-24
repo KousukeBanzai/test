@@ -3,4 +3,11 @@
 @use "../functions" as function;
 
 
-@use "./home";
+
+.container{
+  width: 100%;
+  &__inner{
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+}

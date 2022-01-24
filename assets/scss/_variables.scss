@@ -19,7 +19,7 @@ $brand-disable          :  #888888;
 // brand color
 // -------------------
 
-$brand-main             :  #152d5b;
+$brand-main             :  #041029;
 
 $brand-main-lighter     :  $brand-main;
 $brand-main-lighten     :  $brand-main;
@@ -67,15 +67,17 @@ $line-height-heading     :  1.4;
 $hover-transition        :  .3s;
 $hover-opacity           :  .7;
 
-
 // ============================================================
 // @ 全体構造定義
 // ============================================================
 
+$header_H               :86px;
+$header-primary-menu_H  :60px;
+
 // ============================================================ //
 // @ Z-index定義
 // ============================================================ //
-
+$loading-layer : 99999;
 $zindex-header : 5000;
 
 // ============================================================ //
@@ -116,7 +118,7 @@ $screen-mlg               :  1024px;
 $screen-mlg-min           :  $screen-slg + 1;
 
 // Large screen
-$screen-lg               :   1140px;
+$screen-lg               :   1280px;
 $screen-lg-min           :   $screen-md + 1;
 
 // Xlarge screen
@@ -124,3 +126,15 @@ $screen-xlg               :   1980px;
 $screen-xlg-min           :   $screen-lg + 1;
 
 
+$blakepoints: (
+  'xlg' : $screen-xlg,
+  'lg'  : $screen-lg,
+  'mlg' : $screen-mlg,
+  'slg' : $screen-slg,
+  'md'  : $screen-md,
+  '6ls' : $screen-6ls,
+  '5ls' : $screen-5ls,
+  'sm'  : $screen-sm,
+  'msm' : $screen-msm,
+  'xs'  : $screen-xs,
+);

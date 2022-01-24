@@ -8,6 +8,7 @@ $marginRight: true !default;
 $marginBottom: true !default;
 $endValue: 300 !default;
 
+
 @if $spaceClass {
   @for $i from 0 through $endValue {
     @if $marginTop {
