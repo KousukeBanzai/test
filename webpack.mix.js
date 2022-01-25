@@ -92,23 +92,6 @@ mix
   )
   .sourceMaps();
 
-// Ejs
-// ------------------------------------------------------------
-
-
-// Laravel Mix extension to compile EJS templates.
-// mix.ejs(
-//   './views',
-//   '../',
-//   {
-//     foo: ''
-//   },
-//   {
-//     base: './views',
-//     ext: '.html',
-//     partials: './views/partials'
-//   }
-// )
 
 // Browsersync
 // ------------------------------------------------------------

@@ -1,4 +1,4 @@
-export function hoge(){
+export function scrollObserver(){
   
   function lazyLoadListner() {
     function loading(target) {
