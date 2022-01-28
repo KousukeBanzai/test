@@ -1,0 +1,73 @@
+@use "../variables" as var;
+@use "../mixins" as mix;
+@use "../functions" as function;
+
+//  README
+// ------------------------------------------------------------
+//  ユーティリティ用のフォントサイズクラスを使用する場合「$utilityFontsizeClass」を「true」にする
+//  $endValueはpxの最大値を表す
+// ------------------------------------------------------------
+
+$utilityFontsizeClass: false !default;
+$endValue: 30 !default;
+
+// padding class
+// ------------------------------------------------------------
+
+@for $i from 0 through $endValue {
+  @if $utilityFontsizeClass {
+    .fz_#{$i} {
+      font-size: $i + px;
+    }
+    @include mix.max-media(var.$screen-xlg) {
+      .fz_#{$i}--xlg {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-lg) {
+      .fz_#{$i}--lg {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-mlg) {
+      .fz_#{$i}--mlg {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-slg) {
+      .fz_#{$i}--xlg {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-md) {
+      .fz_#{$i}--md {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-6ls) {
+      .fz_#{$i}--6ls {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-5ls) {
+      .fz_#{$i}--5ls {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-sm) {
+      .fz_#{$i}--sm {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-msm) {
+      .fz_#{$i}--msm {
+        font-size: $i + px;
+      }
+    }
+    @include mix.max-media(var.$screen-xs) {
+      .fz_#{$i}--xs {
+        font-size: $i + px;
+      }
+    }
+  }
+}

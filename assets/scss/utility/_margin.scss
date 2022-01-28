@@ -2,70 +2,76 @@
 @use "../mixins" as mix;
 @use "../functions" as function;
 
-$spaceClass: true !default;
+//  README
+// ------------------------------------------------------------
+//  ユーティリティ用のマージンクラスを使用する場合「$utilityMarginClass」を「true」にし
+//  必要な各マージンクラスを「marginTop/marginBottom/...」をtrueにする
+//  $endValueはpxの最大値を表す
+// ------------------------------------------------------------
+
+$utilityMarginClass: false !default;
 $marginTop: false !default;
-$marginBottom: true !default;
+$marginBottom: false !default;
 $marginLeft: false !default;
 $marginRight: false !default;
 $endValue: 50 !default;
 
-
 // margin class
 // ------------------------------------------------------------
 
-@if $spaceClass {
+@if $utilityMarginClass {
   @for $i from 0 through $endValue {
     @if $marginTop {
       .mt_#{$i} {
         margin-top: $i + px;
       }
       @include mix.max-media(var.$screen-xlg) {
-        .mt_#{$i}_xlg {
+        .mt_#{$i}--xlg {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-lg) {
-        .mt_#{$i}_lg {
+        .mt_#{$i}--lg {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-mlg) {
-        .mt_#{$i}_mlg {
+        .mt_#{$i}--mlg {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-slg) {
-        .mt_#{$i}_xlg {
+        .mt_#{$i}--slg {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-md) {
-        .mt_#{$i}_md {
+        .mt_#{$i}--md {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-6ls) {
-        .mt_#{$i}_6ls {
+        .mt_#{$i}--6ls {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-5ls) {
-        .mt_#{$i}_5ls {
+        .mt_#{$i}--5ls {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-sm) {
-        .mt_#{$i}_sm {
+        .mt_#{$i}--sm {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-msm) {
-        .mt_#{$i}_msm {
+        .mt_#{$i}--msm {
           margin-top: $i + px;
         }
       }
       @include mix.max-media(var.$screen-xs) {
-        .mt_#{$i}_xs {
+        .mt_#{$i}--xs {
           margin-top: $i + px;
         }
       }
@@ -75,52 +81,52 @@ $endValue: 50 !default;
         margin-bottom: $i + px;
       }
       @include mix.max-media(var.$screen-xlg) {
-        .mb_#{$i}_xlg {
+        .mb_#{$i}--xlg {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-lg) {
-        .mb_#{$i}_lg {
+        .mb_#{$i}--lg {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-mlg) {
-        .mb_#{$i}_mlg {
+        .mb_#{$i}--mlg {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-slg) {
-        .mb_#{$i}_xlg {
+        .mb_#{$i}--slg {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-md) {
-        .mb_#{$i}_md {
+        .mb_#{$i}--md {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-6ls) {
-        .mb_#{$i}_6ls {
+        .mb_#{$i}--6ls {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-5ls) {
-        .mb_#{$i}_5ls {
+        .mb_#{$i}--5ls {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-sm) {
-        .mb_#{$i}_sm {
+        .mb_#{$i}--sm {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-msm) {
-        .mb_#{$i}_msm {
+        .mb_#{$i}--msm {
           margin-bottom: $i + px;
         }
       }
       @include mix.max-media(var.$screen-xs) {
-        .mb_#{$i}_xs {
+        .mb_#{$i}--xs {
           margin-bottom: $i + px;
         }
       }
@@ -130,52 +136,52 @@ $endValue: 50 !default;
         margin-left: $i + px;
       }
       @include mix.max-media(var.$screen-xlg) {
-        .ml_#{$i}_xlg {
+        .ml_#{$i}--xlg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-lg) {
-        .ml_#{$i}_lg {
+        .ml_#{$i}--lg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-mlg) {
-        .ml_#{$i}_mlg {
+        .ml_#{$i}--mlg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-slg) {
-        .ml_#{$i}_xlg {
+        .ml_#{$i}--xlg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-md) {
-        .ml_#{$i}_md {
+        .ml_#{$i}--md {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-6ls) {
-        .ml_#{$i}_6ls {
+        .ml_#{$i}--6ls {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-5ls) {
-        .ml_#{$i}_5ls {
+        .ml_#{$i}--5ls {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-sm) {
-        .ml_#{$i}_sm {
+        .ml_#{$i}--sm {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-msm) {
-        .ml_#{$i}_msm {
+        .ml_#{$i}--msm {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-xs) {
-        .ml_#{$i}_xs {
+        .ml_#{$i}--xs {
           margin-left: $i + px;
         }
       }
@@ -185,52 +191,52 @@ $endValue: 50 !default;
         margin-right: $i + px;
       }
       @include mix.max-media(var.$screen-xlg) {
-        .mr_#{$i}_xlg {
+        .mr_#{$i}--xlg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-lg) {
-        .mr_#{$i}_lg {
+        .mr_#{$i}--lg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-mlg) {
-        .mr_#{$i}_mlg {
+        .mr_#{$i}--mlg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-slg) {
-        .mr_#{$i}_xlg {
+        .mr_#{$i}--slg {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-md) {
-        .mr_#{$i}_md {
+        .mr_#{$i}--md {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-6ls) {
-        .mr_#{$i}_6ls {
+        .mr_#{$i}--6ls {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-5ls) {
-        .mr_#{$i}_5ls {
+        .mr_#{$i}--5ls {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-sm) {
-        .mr_#{$i}_sm {
+        .mr_#{$i}--sm {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-msm) {
-        .mr_#{$i}_msm {
+        .mr_#{$i}--msm {
           margin-left: $i + px;
         }
       }
       @include mix.max-media(var.$screen-xs) {
-        .mr_#{$i}_xs {
+        .mr_#{$i}--xs {
           margin-left: $i + px;
         }
       }
@@ -247,52 +253,52 @@ $endValue: 50 !default;
   margin-top: auto;
 }
 @include mix.max-media(var.$screen-xlg) {
-  .mt_auto_xlg {
+  .mt_auto--xlg {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-lg) {
-  .mt_auto_lg {
+  .mt_auto--lg {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-mlg) {
-  .mt_auto_mlg {
+  .mt_auto--mlg {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-slg) {
-  .mt_auto_xlg {
+  .mt_auto--slg {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-md) {
-  .mt_auto_md {
+  .mt_auto--md {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-6ls) {
-  .mt_auto_6ls {
+  .mt_auto--6ls {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-5ls) {
-  .mt_auto_5ls {
+  .mt_auto--5ls {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-sm) {
-  .mt_auto_sm {
+  .mt_auto--sm {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-msm) {
-  .mt_auto_msm {
+  .mt_auto--msm {
     margin-top: auto;
   }
 }
 @include mix.max-media(var.$screen-xs) {
-  .mt_auto_xs {
+  .mt_auto--xs {
     margin-top: auto;
   }
 }
@@ -303,52 +309,52 @@ $endValue: 50 !default;
   margin-bottom: auto;
 }
 @include mix.max-media(var.$screen-xlg) {
-  .mb_auto_xlg {
+  .mb_auto--xlg {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-lg) {
-  .mb_auto_lg {
+  .mb_auto--lg {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-mlg) {
-  .mb_auto_mlg {
+  .mb_auto--mlg {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-slg) {
-  .mb_auto_xlg {
+  .mb_auto--slg {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-md) {
-  .mb_auto_md {
+  .mb_auto--md {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-6ls) {
-  .mb_auto_6ls {
+  .mb_auto--6ls {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-5ls) {
-  .mb_auto_5ls {
+  .mb_auto--5ls {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-sm) {
-  .mb_auto_sm {
+  .mb_auto--sm {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-msm) {
-  .mb_auto_msm {
+  .mb_auto--msm {
     margin-bottom: auto;
   }
 }
 @include mix.max-media(var.$screen-xs) {
-  .mb_auto_xs {
+  .mb_auto--xs {
     margin-bottom: auto;
   }
 }
@@ -359,52 +365,52 @@ $endValue: 50 !default;
   margin-left: auto;
 }
 @include mix.max-media(var.$screen-xlg) {
-  .ml_auto_xlg {
+  .ml_auto--xlg {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-lg) {
-  .ml_auto_lg {
+  .ml_auto--lg {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-mlg) {
-  .ml_auto_mlg {
+  .ml_auto--mlg {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-slg) {
-  .ml_auto_xlg {
+  .ml_auto--slg {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-md) {
-  .ml_auto_md {
+  .ml_auto--md {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-6ls) {
-  .ml_auto_6ls {
+  .ml_auto--6ls {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-5ls) {
-  .ml_auto_5ls {
+  .ml_auto--5ls {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-sm) {
-  .ml_auto_sm {
+  .ml_auto--sm {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-msm) {
-  .ml_auto_msm {
+  .ml_auto--msm {
     margin-left: auto;
   }
 }
 @include mix.max-media(var.$screen-xs) {
-  .ml_auto_xs {
+  .ml_auto--xs {
     margin-left: auto;
   }
 }
@@ -415,52 +421,52 @@ $endValue: 50 !default;
   margin-right: auto;
 }
 @include mix.max-media(var.$screen-xlg) {
-  .mr_auto_xlg {
+  .mr_auto--xlg {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-lg) {
-  .mr_auto_lg {
+  .mr_auto--lg {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-mlg) {
-  .mr_auto_mlg {
+  .mr_auto--mlg {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-slg) {
-  .mr_auto_xlg {
+  .mr_auto--slg {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-md) {
-  .mr_auto_md {
+  .mr_auto--md {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-6ls) {
-  .mr_auto_6ls {
+  .mr_auto--6ls {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-5ls) {
-  .mr_auto_5ls {
+  .mr_auto--5ls {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-sm) {
-  .mr_auto_sm {
+  .mr_auto--sm {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-msm) {
-  .mr_auto_msm {
+  .mr_auto--msm {
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-xs) {
-  .mr_auto_xs {
+  .mr_auto--xs {
     margin-right: auto;
   }
 }
@@ -472,61 +478,61 @@ $endValue: 50 !default;
   margin-right: auto;
 }
 @include mix.max-media(var.$screen-xlg) {
-  .ms_auto_xlg {
+  .ms_auto--xlg {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-lg) {
-  .ms_auto_lg {
+  .ms_auto--lg {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-mlg) {
-  .ms_auto_mlg {
+  .ms_auto--mlg {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-slg) {
-  .ms_auto_xlg {
+  .ms_auto--slg {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-md) {
-  .ms_auto_md {
+  .ms_auto--md {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-6ls) {
-  .ms_auto_6ls {
+  .ms_auto--6ls {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-5ls) {
-  .ms_auto_5ls {
+  .ms_auto--5ls {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-sm) {
-  .ms_auto_sm {
+  .ms_auto--sm {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-msm) {
-  .ms_auto_msm {
+  .ms_auto--msm {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @include mix.max-media(var.$screen-xs) {
-  .ms_auto_xs {
+  .ms_auto--xs {
     margin-left: auto;
     margin-right: auto;
   }

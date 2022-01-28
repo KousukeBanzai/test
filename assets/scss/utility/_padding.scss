@@ -1,0 +1,245 @@
+@use "../variables" as var;
+@use "../mixins" as mix;
+@use "../functions" as function;
+
+//  README
+// ------------------------------------------------------------
+//  ユーティリティ用のパティングクラスを使用する場合「$utilityPaddingClass」を「true」にし
+//  必要な各マージンクラスを「paddingTop/paddingBottom/...」をtrueにする
+//  $endValueはpxの最大値を表す
+// ------------------------------------------------------------
+
+$utilityPaddingClass: false !default;
+$paddingTop: false !default;
+$paddingBottom: false !default;
+$paddingLeft: false !default;
+$paddingRight: false !default;
+$endValue: 50 !default;
+
+// padding class
+// ------------------------------------------------------------
+
+@if $utilityPaddingClass {
+  @for $i from 0 through $endValue {
+    @if $paddingTop {
+      .pt_#{$i} {
+        padding-top: $i + px;
+      }
+      @include mix.max-media(var.$screen-xlg) {
+        .pt_#{$i}--xlg {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-lg) {
+        .pt_#{$i}--lg {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-mlg) {
+        .pt_#{$i}--mlg {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-slg) {
+        .pt_#{$i}--slg {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-md) {
+        .pt_#{$i}--md {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-6ls) {
+        .pt_#{$i}--6ls {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-5ls) {
+        .pt_#{$i}--5ls {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-sm) {
+        .pt_#{$i}--sm {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-msm) {
+        .pt_#{$i}--msm {
+          padding-top: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-xs) {
+        .pt_#{$i}--xs {
+          padding-top: $i + px;
+        }
+      }
+    }
+    @if $paddingBottom {
+      .pb_#{$i} {
+        padding-bottom: $i + px;
+      }
+      @include mix.max-media(var.$screen-xlg) {
+        .pb_#{$i}--xlg {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-lg) {
+        .pb_#{$i}--lg {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-mlg) {
+        .pb_#{$i}--mlg {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-slg) {
+        .pb_#{$i}--slg {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-md) {
+        .pb_#{$i}--md {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-6ls) {
+        .pb_#{$i}--6ls {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-5ls) {
+        .pb_#{$i}--5ls {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-sm) {
+        .pb_#{$i}--sm {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-msm) {
+        .pb_#{$i}--msm {
+          padding-bottom: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-xs) {
+        .pb_#{$i}--xs {
+          padding-bottom: $i + px;
+        }
+      }
+    }
+    @if $paddingLeft {
+      .pl_#{$i} {
+        padding-left: $i + px;
+      }
+      @include mix.max-media(var.$screen-xlg) {
+        .pl_#{$i}--xlg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-lg) {
+        .pl_#{$i}--lg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-mlg) {
+        .pl_#{$i}--mlg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-slg) {
+        .pl_#{$i}--slg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-md) {
+        .pl_#{$i}--md {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-6ls) {
+        .pl_#{$i}--6ls {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-5ls) {
+        .pl_#{$i}--5ls {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-sm) {
+        .pl_#{$i}--sm {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-msm) {
+        .pl_#{$i}--msm {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-xs) {
+        .pl_#{$i}--xs {
+          padding-left: $i + px;
+        }
+      }
+    }
+    @if $paddingRight {
+      .pr_#{$i} {
+        margin-right: $i + px;
+      }
+      @include mix.max-media(var.$screen-xlg) {
+        .pr_#{$i}--xlg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-lg) {
+        .pr_#{$i}--lg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-mlg) {
+        .pr_#{$i}--mlg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-slg) {
+        .pr_#{$i}--slg {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-md) {
+        .pr_#{$i}--md {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-6ls) {
+        .pr_#{$i}--6ls {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-5ls) {
+        .pr_#{$i}--5ls {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-sm) {
+        .pr_#{$i}--sm {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-msm) {
+        .pr_#{$i}--msm {
+          padding-left: $i + px;
+        }
+      }
+      @include mix.max-media(var.$screen-xs) {
+        .pr_#{$i}--xs {
+          padding-left: $i + px;
+        }
+      }
+    }
+  }
+}

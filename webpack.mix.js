@@ -25,7 +25,7 @@ mix.webpackConfig({ devtool: "source-map" }); // 追加
 
 // JavaScript Bundling
 // + Vue Support
-glob.sync(srcDir + assetsDir + '/js/**/*.js').map(function(file){
+glob.sync(srcDir + assetsDir + '/js/*.js').map(function(file){
   mix.js(file, './' + assetsDir + '/js/').vue()
 });
 
@@ -78,8 +78,7 @@ mix
       enabled: false, //enableをtrueにすることで不使用CSSをパージ
       extend: {
         content: [
-          path.join(__dirname, '../**/*.html'),
-          path.join(__dirname, '../**/*.php')
+          path.join(__dirname, '../**/*.html')
         ],
         //https://purgecss.com/safelisting.html#specific-selectors
         safelist:{
