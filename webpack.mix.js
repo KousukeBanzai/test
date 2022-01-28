@@ -50,9 +50,9 @@ mix
   {
     implementation: require("sass"), // Prefer `dart-sass`
     sourceMap: true,
-    // sassOptions: {
-    //   outputStyle: "compressed",
-    // },
+    sassOptions: {
+      outputStyle: "compressed",
+    },
   })
   .options({
     processCssUrls: false, // false でurl()の変換をさせない
@@ -75,7 +75,7 @@ mix
   // purgeCss：未使用CSSを削除
   .purgeCss(
     {
-      // enabled: true,
+      enabled: false, //enableをtrueにすることで不使用CSSをパージ
       extend: {
         content: [
           path.join(__dirname, '../**/*.html'),
