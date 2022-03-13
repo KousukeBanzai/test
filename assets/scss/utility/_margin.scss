@@ -9,12 +9,12 @@
 //  $endValueはpxの最大値を表す
 // ------------------------------------------------------------
 
-$utilityMarginClass: false !default;
-$marginTop: false !default;
-$marginBottom: false !default;
+$utilityMarginClass: true !default;
+$marginTop: true !default;
+$marginBottom: true !default;
 $marginLeft: false !default;
-$marginRight: false !default;
-$endValue: 50 !default;
+$marginRight: true !default;
+$endValue: 120 !default;
 
 // margin class
 // ------------------------------------------------------------

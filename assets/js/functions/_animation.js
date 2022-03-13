@@ -81,9 +81,8 @@ export function scrollObserver(){
     
   };
   
-  window.addEventListener("DOMContentLoaded", lazyLoadListner);
+  lazyLoadListner();
+  //window.addEventListener("DOMContentLoaded", lazyLoadListner);
   window.lazyLoadListner = lazyLoadListner;
   
 }
-
-

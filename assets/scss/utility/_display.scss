@@ -5,15 +5,16 @@
 @each $media, $blakepoint in var.$blakepoints {
   .hidden--#{$media}{
     @media screen and (max-width: #{$blakepoint}) {
-      display: none;
+      display: none!important;
     }
   }
 }
 
 @each $media, $blakepoint in var.$blakepoints {
   .visible--#{$media}{
+    display: none!important;
     @media screen and (max-width: #{$blakepoint}) {
-      display: block;
+      display: block!important;
     }
   }
 }

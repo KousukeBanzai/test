@@ -1,6 +1,6 @@
 {
   "name": "tokiyori develop kit",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "use node.js v16.13.1",
   "main": "index.js",
   "scripts": {
@@ -34,8 +34,7 @@
   },
   "dependencies": {
     "build": "^0.1.4",
-    "laravel-mix-ejs": "^1.1.3",
     "npm": "^8.3.0",
-    "run": "^1.4.0"
+`    "run": "^1.4.0"
   }
 }

@@ -9,12 +9,12 @@
 //  $endValueはpxの最大値を表す
 // ------------------------------------------------------------
 
-$utilityPaddingClass: false !default;
-$paddingTop: false !default;
-$paddingBottom: false !default;
-$paddingLeft: false !default;
-$paddingRight: false !default;
-$endValue: 50 !default;
+$utilityPaddingClass: true !default;
+$paddingTop: true !default;
+$paddingBottom: true !default;
+$paddingLeft: true !default;
+$paddingRight: true !default;
+$endValue: 65 !default;
 
 // padding class
 // ------------------------------------------------------------
